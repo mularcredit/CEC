@@ -1,0 +1,3 @@
+# intermediate chapter captures from source/export_pdf.cjs (rebuilt on every PDF export)
+source/pdf-parts/
+__pycache__/

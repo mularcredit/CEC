@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christ Extension Church — Brand Book</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-82 0 342 342'%3E%3Crect x='-82' width='342' height='342' rx='60' fill='%23B50000'/%3E%3Cg fill='%23fff' transform='translate(40 50) scale(.72)'%3E%3Crect y='82' width='179' height='24'/%3E%3Crect x='77' width='24' height='342'/%3E%3Crect x='77' y='318' width='102' height='24'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#B50000;--red-deep:#7E0000;--red-80:#C43333;--red-60:#D36666;--red-40:#E19999;--red-20:#F0CCCC;
+  --ink:#111111;--slate:#5C5752;--stone:#E6DFD3;--parchment:#F7F3EC;--white:#FFFFFF;--rule:#E4DED4;
+  --serif:'EB Garamond',Garamond,'Times New Roman',serif;
+  --sans:'Source Sans 3','Segoe UI',Arial,sans-serif;
+  --nav:60px;--gut:clamp(16px,6vw,96px);
+  --ease:cubic-bezier(.2,.7,.2,1);--sweep:cubic-bezier(.65,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,textarea{font:inherit;color:inherit}
+::selection{background:var(--red);color:#fff}
+
+/* ═══ NAV ═══ */
+.nav{position:fixed;inset:0 0 auto;z-index:50;height:var(--nav);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 var(--gut);color:#fff;transition:background .4s,color .4s}
+.nav.solid{background:rgba(17,17,17,.92);backdrop-filter:blur(12px)}
+.nav-brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none;font-family:var(--serif);font-size:18px;white-space:nowrap}
+.nav-brand svg{height:24px;width:auto}
+.nav-now{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.55;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-btn{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:10px 0}
+.nav-btn i{display:block;width:22px;height:2px;background:currentColor;box-shadow:0 6px 0 currentColor;transform:translateY(-3px)}
+.progress{position:fixed;left:0;top:var(--nav);height:3px;width:100%;z-index:51;transform-origin:left;transform:scaleX(0);background:var(--red);pointer-events:none}
+
+.toc-overlay{position:fixed;inset:0;z-index:60;background:var(--ink);color:#fff;padding:calc(var(--nav) + 24px) var(--gut) 40px;overflow:auto;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.toc-overlay.open{opacity:1;visibility:visible}
+.toc-close{position:absolute;top:18px;right:var(--gut);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:6px 0}
+.toc-grid{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);column-gap:64px;max-width:1200px;margin:0 auto}
+.toc-grid a{display:flex;align-items:baseline;gap:20px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);color:#fff;text-decoration:none}
+.toc-grid b{font-size:12px;color:var(--red-40);min-width:24px}
+.toc-grid span{font-family:var(--serif);font-size:clamp(24px,3vw,36px);transition:transform .3s var(--ease)}
+.toc-grid a:hover span{transform:translateX(10px)}
+
+/* ═══ SECTIONS ═══ */
+section{position:relative;padding:clamp(88px,12vw,160px) var(--gut);overflow:hidden}
+.wrap{max-width:1200px;margin:0 auto;position:relative}
+.on-white{background:var(--white)}.on-parch{background:var(--parchment)}
+.on-ink{background:var(--ink);color:#fff}.on-red{background:var(--red);color:#fff}
+
+/* The extension line: cross + stem + tail running to the edge, with the title sitting on it */
+.xline{--t:clamp(5px,.72vw,9px);--c:var(--red);position:relative;padding:calc(var(--t)*2.6) 0 calc(var(--t)*2.4) calc(var(--t)*10.5)}
+.on-ink .xline,.on-red .xline{--c:#fff}
+.xline>i{position:absolute;background:var(--c);display:block}
+.xline .xs{left:calc(var(--t)*3.208);top:0;bottom:0;width:var(--t);transform-origin:bottom}
+.xline .xb{left:0;top:calc(var(--t)*3.417);width:calc(var(--t)*7.458);height:var(--t)}
+.xline .xt{left:calc(var(--t)*3.208);bottom:0;height:var(--t);right:calc(50% - 50vw);transform-origin:left}
+.js .xline .xs{transform:scaleY(0);transition:transform .7s var(--ease)}
+.js .xline .xb{transform:scaleX(0);transition:transform .5s .5s var(--ease)}
+.js .xline .xt{transform:scaleX(0);transition:transform 1.6s .75s var(--sweep)}
+.js .xline .xh{opacity:0;transform:translateY(14px);transition:opacity .8s .55s,transform .8s .55s var(--ease)}
+.js .xline.in .xs,.js .xline.in .xb,.js .xline.in .xt{transform:none}
+.js .xline.in .xh{opacity:1;transform:none}
+
+.chap{margin-bottom:clamp(48px,7vw,88px)}
+.chap-k{display:flex;gap:14px;align-items:baseline;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;margin:0 0 18px calc(clamp(5px,.72vw,9px)*10.5);color:var(--red)}
+.on-ink .chap-k{color:var(--red-40)}.on-red .chap-k{color:rgba(255,255,255,.75)}
+.chap h2{font-family:var(--serif);font-weight:500;font-size:clamp(44px,7.4vw,108px);line-height:.92;letter-spacing:-.015em}
+
+h3{font-family:var(--serif);font-weight:500;font-size:clamp(26px,2.6vw,34px);line-height:1.1;margin-bottom:12px}
+.lede{font-size:clamp(16px,1.35vw,19px);line-height:1.75;color:var(--slate)}
+.on-ink .lede{color:rgba(255,255,255,.66)}.on-red .lede{color:rgba(255,255,255,.85)}
+.lede b{color:var(--ink);font-weight:600}.on-ink .lede b{color:#fff}
+.k{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.on-ink .k{color:var(--red-40)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px)}
+.grid-side{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.note{font-size:13px;color:var(--slate);line-height:1.6}
+.on-ink .note{color:rgba(255,255,255,.5)}
+
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}.d4{transition-delay:.4s!important}.d5{transition-delay:.5s!important}.d6{transition-delay:.6s!important}
+
+.spec{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--rule);font-size:15px;line-height:1.6}
+.spec:last-child{border-bottom:1px solid var(--rule)}
+.spec dt{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding-top:3px}
+.spec dd{color:var(--slate)}
+.on-ink .spec{border-color:rgba(255,255,255,.12)}.on-ink .spec dd{color:rgba(255,255,255,.65)}
+
+/* ═══ COVER ═══ */
+#cover{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-top:calc(var(--nav) + 48px);padding-bottom:48px}
+#cover::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 78% 30%,rgba(181,0,0,.22),transparent 70%),radial-gradient(40% 40% at 10% 90%,rgba(255,255,255,.04),transparent 70%);pointer-events:none}
+.cover-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;position:relative}
+.cover-top img{width:clamp(200px,24vw,320px)}
+.cover-meta{text-align:right;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:2}
+.cover-main{position:relative}
+.cover-main .xline{--t:clamp(9px,1.55vw,22px);padding-left:calc(var(--t)*10);padding-top:calc(var(--t)*2.2)}
+.cover-main h1{font-family:var(--serif);font-weight:500;font-size:clamp(64px,13.5vw,220px);line-height:.86;letter-spacing:-.025em;color:#fff}
+.cover-sub{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-top:28px;padding-left:calc(clamp(9px,1.55vw,22px)*10)}
+.cover-sub p{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.2vw,30px);color:rgba(255,255,255,.8)}
+.cover-sub span{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+
+/* ═══ MANIFESTO ═══ */
+#manifesto{min-height:100vh;display:flex;align-items:center}
+#manifesto .wrap{width:100%}
+.mani{font-family:var(--serif);font-size:clamp(34px,5.6vw,84px);line-height:1.08;letter-spacing:-.01em;max-width:1100px}
+.mani span{display:block}
+.mani em{font-style:italic}
+.mani .last{margin-top:.5em;padding-top:.45em;position:relative}
+.mani .last::before{content:"";position:absolute;left:0;top:0;height:clamp(5px,.6vw,8px);width:100vw;background:#fff;transform-origin:left;transform:scaleX(0);transition:transform 1.6s .9s var(--sweep)}
+.mani .last.in::before,html:not(.js) .mani .last::before{transform:none}
+.mani-src{margin-top:40px;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+
+/* ═══ CONTENTS ═══ */
+.contents{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);column-gap:64px}
+.contents a{display:grid;grid-template-columns:40px 1fr auto;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+.contents b{font-size:12px;color:var(--red)}
+.contents span{font-family:var(--serif);font-size:clamp(22px,2.2vw,30px);transition:color .2s}
+.contents small{font-size:13px;color:var(--slate)}
+.contents a:hover span{color:var(--red)}
+
+/* ═══ 01 WHO ═══ */
+.founders{margin-top:36px;display:flex;align-items:center;gap:16px;font-size:14px;color:var(--slate)}
+.founders svg{height:40px;width:auto;flex:none}
+.founders b{display:block;color:var(--ink);font-family:var(--serif);font-size:21px;font-weight:500}
+.mv{display:grid;gap:20px}
+.mv-card{background:var(--parchment);border-radius:20px;padding:clamp(28px,3.4vw,44px)}
+.mv-card.dark{background:var(--ink);color:#fff}
+.mv-card.dark .k{color:var(--red-40)}
+.mv-card p{font-family:var(--serif);font-size:clamp(21px,2vw,27px);line-height:1.4}
+.mv-card b{font-weight:600}
+.mv-card.dark b{color:var(--red-40);font-weight:500}
+
+/* ═══ 02 FOUNDATION ═══ */
+.isaiah{font-family:var(--serif);font-size:clamp(28px,3.6vw,52px);line-height:1.22;max-width:1080px}
+.isaiah .hl{color:rgba(255,255,255,.35);transition:color .8s}
+.isaiah .hl.in{color:#fff}
+.isaiah .w{position:relative;white-space:nowrap}
+.isaiah .w::after{content:"";position:absolute;left:0;right:0;bottom:-.04em;height:.07em;background:var(--red-40);transform:scaleX(0);transform-origin:left;transition:transform .9s .4s var(--sweep)}
+.isaiah .hl.in .w::after{transform:none}
+.ref{margin-top:26px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red-40)}
+.keywords{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);border-radius:18px;overflow:hidden;margin:72px 0}
+.keywords div{background:var(--ink);padding:28px 24px}
+.keywords h4{font-family:var(--serif);font-weight:500;font-size:clamp(30px,3vw,44px);font-style:italic;margin-bottom:10px}
+.keywords p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.62)}
+.values{list-style:none;counter-reset:v}
+.values li{display:flex;align-items:baseline;gap:clamp(16px,3vw,40px);padding:clamp(14px,1.6vw,22px) 0;border-top:1px solid rgba(255,255,255,.12);counter-increment:v}
+.values li:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.values li::before{content:"0" counter(v);font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--red-40);min-width:28px}
+.values span{font-family:var(--serif);font-size:clamp(34px,5.4vw,76px);line-height:1;transition:transform .5s var(--ease),color .3s}
+.values li:hover span{transform:translateX(14px);color:var(--red-40)}
+
+/* ═══ 03 LOGO ═══ */
+.stage{border-radius:22px;background:var(--white);padding:clamp(28px,6vw,88px);position:relative}
+.on-white .stage{background:var(--parchment)}
+.anatomy{position:relative}
+.pin{position:absolute;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center;transform:translate(-50%,-50%);transition:transform .3s var(--ease),background .3s;box-shadow:0 0 0 5px rgba(255,255,255,.9)}
+.pin.on{background:var(--red);transform:translate(-50%,-50%) scale(1.25)}
+.parts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.part{padding:20px;border-radius:14px;background:var(--white);transition:background .3s,color .3s;cursor:default}
+.part b{display:block;font-size:12px;color:var(--red);margin-bottom:8px}
+.part strong{display:block;font-family:var(--serif);font-weight:500;font-size:22px;margin-bottom:4px}
+.part p{font-size:13.5px;line-height:1.55;color:var(--slate)}
+.part.on{background:var(--ink);color:#fff}.part.on p{color:rgba(255,255,255,.65)}.part.on b{color:var(--red-40)}
+
+/* ═══ 04 SPACE ═══ */
+.cs-box{position:relative;padding:7.2%;transition:background .4s}
+.cs-box::before{content:"";position:absolute;inset:0;border:1.5px dashed var(--red-60);opacity:0;transition:opacity .4s}
+.cs-box.show{background:repeating-linear-gradient(45deg,rgba(181,0,0,.07) 0 8px,transparent 8px 16px)}
+.cs-box.show::before{opacity:1}
+.cs-inner{background:var(--white);position:relative}
+.cs-box.show .cs-inner{outline:1px solid var(--red-40)}
+.cs-x{position:absolute;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--red);opacity:0;transition:opacity .4s}
+.cs-box.show .cs-x{opacity:1}
+.toggle{display:inline-flex;align-items:center;gap:12px;margin-top:22px;font-size:13px;font-weight:600}
+.toggle i{width:44px;height:24px;border-radius:12px;background:var(--stone);position:relative;transition:background .3s}
+.toggle i::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .3s var(--ease);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.toggle[aria-pressed="true"] i{background:var(--red)}
+.toggle[aria-pressed="true"] i::after{transform:translateX(20px)}
+.sizes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.size{background:var(--parchment);border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:190px}
+.size .art{flex:1;display:flex;align-items:center}
+.size b{display:block;font-family:var(--serif);font-weight:500;font-size:22px}
+.size small{font-size:13px;color:var(--slate);line-height:1.5}
+
+/* ═══ 05 VERSIONS ═══ */
+.vs{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:stretch}
+.vs-stage{border-radius:22px;min-height:440px;display:grid;place-items:center;padding:clamp(28px,6vw,80px);transition:background .6s var(--ease);position:relative;overflow:hidden}
+.vs-stage img{width:min(620px,100%)}
+.vs-cap{position:absolute;left:24px;bottom:20px;right:24px;display:flex;justify-content:space-between;gap:12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);transition:color .6s}
+.vs-pick{display:flex;flex-direction:column;gap:8px}
+.vs-pick button{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:14px;background:var(--white);text-align:left;transition:box-shadow .25s}
+.vs-pick button:hover{box-shadow:0 6px 20px -10px rgba(0,0,0,.25)}
+.vs-pick button[aria-pressed="true"]{box-shadow:0 0 0 2px var(--ink)}
+.vs-pick i{width:36px;height:36px;border-radius:10px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1)}
+.vs-pick span{font-size:14px;font-weight:600;line-height:1.3}
+.vs-pick small{display:block;font-weight:400;font-size:12px;color:var(--slate)}
+.photo-dark{background:radial-gradient(40% 60% at 30% 40%,rgba(255,190,120,.35),transparent 70%),radial-gradient(50% 70% at 75% 60%,rgba(120,80,60,.5),transparent 70%),linear-gradient(160deg,#2a2220,#0d0b0a)}
+.photo-light{background:radial-gradient(50% 60% at 25% 35%,#fff,transparent 70%),radial-gradient(60% 70% at 80% 70%,#d9cfc0,transparent 70%),linear-gradient(160deg,#efe9df,#d8d0c4)}
+
+/* ═══ 06 MARK ═══ */
+.mark-hero{border-radius:22px;background:var(--parchment);padding:clamp(40px,7vw,96px) 0 clamp(40px,7vw,96px) clamp(28px,6vw,80px);overflow:hidden}
+.mark-hero .xline{--t:clamp(8px,1.3vw,18px);padding:0;height:calc(var(--t)*14.25)}
+.construct{width:100%;height:auto;display:block}
+.construct .m{fill:var(--red)}
+.construct .dim{stroke:var(--slate);stroke-width:1.5;fill:none}
+.construct .lab{fill:var(--slate);font-family:var(--sans);font-size:15px;font-weight:600}
+.construct .lab.r{fill:var(--red)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{border-radius:18px;padding:36px 0 36px 32px;overflow:hidden}
+.tile .xline{--t:6px;padding:0;height:calc(var(--t)*14.25)}
+.tile.plain .xline{--c:var(--red)}
+.tile .xline .xt,.dv .xline .xt,.screen-in .xline .xt,.lt .xline .xt,.prog .xline .xt,.lh .xline .xt,.bc .xline .xt,.banner .xline .xt{right:0}
+.tile-cap{font-size:12px;font-weight:600;color:var(--slate);margin-top:10px}
+.squares{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sq{aspect-ratio:1;border-radius:22px;display:grid;place-items:center}
+.sq.round{border-radius:50%}
+.sq svg{height:56%;width:auto}
+
+/* ═══ 07 DEVICE ═══ */
+.device{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dv{border-radius:20px;background:#1c1c1c;padding:32px 0 32px 32px;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+.dv p.c{font-size:13px;line-height:1.55;color:rgba(255,255,255,.6);padding-right:32px}
+.dv.light{background:var(--parchment);color:var(--ink)}
+.dv.light p.c{color:var(--slate)}
+.dv.red{background:var(--red)}
+.dv h4{font-family:var(--serif);font-weight:500;font-size:clamp(28px,2.6vw,40px);line-height:1.02}
+.dv .xline{--t:5px;padding:calc(var(--t)*2.2) 0 calc(var(--t)*2) calc(var(--t)*10)}
+.dv.light .xline{--c:var(--red)}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:56px}
+.rules div{padding-top:18px;border-top:1px solid rgba(255,255,255,.15)}
+.rules b{display:block;font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:6px}
+.rules p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.62)}
+
+/* ═══ 08 MISUSE ═══ */
+.donts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dont .st{position:relative;aspect-ratio:16/10;border-radius:18px;background:var(--white);display:grid;place-items:center;overflow:hidden;padding:28px}
+.dont .st img{max-width:84%}
+.dont .st::after{content:"";position:absolute;inset:0;background:linear-gradient(to top right,transparent calc(50% - 1px),rgba(181,0,0,.55) 50%,transparent calc(50% + 1px));pointer-events:none}
+.dont p{font-size:14px;line-height:1.55;color:var(--slate);margin-top:12px}
+.dont p strong{display:block;color:var(--ink);font-family:var(--serif);font-weight:500;font-size:20px}
+
+/* ═══ 09 COLOUR ═══ */
+.sw-hero{border-radius:24px;background:var(--red);color:#fff;padding:clamp(28px,4vw,56px);min-height:clamp(320px,38vw,480px);display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.sw-hero h3{font-size:clamp(56px,9vw,140px);line-height:.85;margin:0}
+.sw-hero .from{font-size:14px;max-width:340px;line-height:1.6;opacity:.85}
+.codes{display:flex;flex-wrap:wrap;gap:8px}
+.code{display:inline-flex;gap:8px;align-items:baseline;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.14);font-size:13px;font-variant-numeric:tabular-nums;transition:background .2s}
+.code:hover{background:rgba(255,255,255,.26)}
+.code em{font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;opacity:.7}
+.dark-codes .code{background:rgba(0,0,0,.06)}.dark-codes .code:hover{background:rgba(0,0,0,.12)}
+.sw-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.sw-row.four{grid-template-columns:repeat(4,1fr)}
+.sw{border-radius:20px;padding:24px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.sw h4{font-family:var(--serif);font-weight:500;font-size:30px;line-height:1}
+.sw small{display:block;font-family:var(--sans);font-size:13px;opacity:.7;margin-top:6px}
+.tints{display:flex;border-radius:16px;overflow:hidden;margin-top:16px;height:72px}
+.tints button{flex:1;display:flex;align-items:flex-end;padding:10px 12px;font-size:12px;font-weight:700;transition:flex .4s var(--ease)}
+.tints button:hover{flex:1.6}
+.balance{display:flex;height:120px;border-radius:16px;overflow:hidden;margin-top:14px}
+.balance div{display:flex;align-items:flex-end;padding:12px;font-size:12px;font-weight:700}
+table.contrast{width:100%;border-collapse:collapse;font-size:14px}
+table.contrast th,table.contrast td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--rule)}
+table.contrast th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
+.pair{display:inline-block;padding:4px 12px;border-radius:6px;font-weight:600}
+.ok{color:#1E6B3A;font-weight:700}.no{color:var(--red);font-weight:700}
+.toast{position:fixed;left:50%;bottom:28px;z-index:70;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:#fff;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:600;transition:opacity .3s,transform .3s var(--ease);pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ═══ 10 TYPE ═══ */
+.faces{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.face{background:var(--white);border-radius:22px;padding:clamp(28px,3.4vw,44px);overflow:hidden}
+.face .aa{font-size:clamp(120px,15vw,220px);line-height:.8;margin:-6px 0 24px}
+.face .nm{font-size:24px;font-weight:600}
+.face .rl{font-size:13px;color:var(--slate);margin:6px 0 22px}
+.face .gl{font-size:18px;color:var(--slate);line-height:1.55;word-break:break-all}
+.tester{background:var(--ink);color:#fff;border-radius:22px;margin-top:20px;overflow:hidden}
+.tester-bar{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.1);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.seg{display:inline-flex;background:rgba(255,255,255,.08);border-radius:10px;padding:3px}
+.seg button{padding:7px 12px;border-radius:8px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:none;color:rgba(255,255,255,.7)}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--ink)}
+.tester input[type=range]{accent-color:var(--red-40);width:140px}
+.tester-out{padding:clamp(24px,4vw,48px);font-family:var(--serif);font-size:72px;line-height:1.1;outline:none;min-height:200px;word-break:break-word}
+.scale{margin-top:20px;background:var(--white);border-radius:22px;overflow:hidden}
+.srow{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:baseline;padding:22px clamp(20px,3vw,36px);border-bottom:1px solid var(--rule)}
+.srow:last-child{border:0}
+.srow .lb{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);line-height:1.6}
+.srow .lb span{display:block;font-weight:400;letter-spacing:0;text-transform:none;font-size:12px}
+
+/* ═══ 11 VOICE ═══ */
+.traits{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.trait{background:#1c1c1c;border-radius:20px;padding:28px 24px;transition:background .3s,transform .4s var(--ease)}
+.trait:hover{background:var(--red);transform:translateY(-6px)}
+.trait h4{font-family:var(--serif);font-weight:500;font-size:34px;margin-bottom:10px}
+.trait p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.66)}
+.trait small{display:block;margin-top:16px;font-size:12px;font-weight:600;color:var(--red-40)}
+.trait:hover small{color:#fff}
+.say{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.say>div{border-radius:20px;padding:28px}
+.say .yes{background:rgba(255,255,255,.07)}
+.say .nope{background:rgba(181,0,0,.2)}
+.say ul{list-style:none}
+.say li{font-family:var(--serif);font-size:clamp(20px,1.8vw,24px);line-height:1.4;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.say li:last-child{border:0}
+.say .nope li{text-decoration:line-through;text-decoration-color:rgba(225,153,153,.6);text-decoration-thickness:1.5px;color:rgba(255,255,255,.75)}
+
+/* ═══ 12 PRACTICE ═══ */
+.apps{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2vw,28px)}
+.app{grid-column:span 6}.app.w7{grid-column:span 7}.app.w5{grid-column:span 5}.app.w4{grid-column:span 4}.app.w8{grid-column:span 8}
+.mock{border-radius:20px;overflow:hidden;position:relative}
+.cap{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-top:12px}
+/* stage screen */
+.screen{background:#d9d2c6;padding:6% 7% 9%}
+.screen-in{aspect-ratio:16/9;background:var(--ink);border-radius:6px;box-shadow:0 0 0 10px #1a1a1a,0 40px 60px -30px rgba(0,0,0,.6);position:relative;overflow:hidden;color:#fff;padding:0 0 0 7%;display:flex;flex-direction:column;justify-content:center}
+.screen-in::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 80% 20%,rgba(181,0,0,.3),transparent 70%)}
+.screen-in .k{color:var(--red-40);font-size:clamp(8px,.9vw,11px);position:relative;margin-left:calc(clamp(3px,.55vw,7px)*10)}
+.screen-in .xline{--t:clamp(3px,.55vw,7px);--c:#fff;padding-left:calc(var(--t)*10)}
+.screen-in h4{font-family:var(--serif);font-weight:500;font-size:clamp(26px,4.4vw,62px);line-height:.95}
+/* live lower third */
+.live{aspect-ratio:16/9;position:relative;overflow:hidden;background:radial-gradient(18% 34% at 48% 42%,rgba(240,200,170,.55),transparent 70%),radial-gradient(14% 50% at 48% 78%,rgba(30,30,40,.95),transparent 72%),radial-gradient(60% 50% at 50% 0%,rgba(255,220,170,.35),transparent 70%),linear-gradient(180deg,#3b2f2a,#120e0d)}
+.live .tag{position:absolute;top:5%;left:4%;display:flex;gap:8px;align-items:center;font-size:clamp(8px,.9vw,11px);font-weight:700;letter-spacing:.16em;color:#fff;background:var(--red);padding:5px 10px;border-radius:4px}
+.live .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.2}}
+.lt{position:absolute;left:5%;right:0;bottom:9%;color:#fff}
+.lt .xline{--t:clamp(3px,.45vw,6px);--c:#fff;padding-left:calc(var(--t)*10)}
+.lt b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(20px,2.6vw,36px);line-height:1}
+.lt span{display:block;font-size:clamp(9px,1vw,13px);letter-spacing:.14em;text-transform:uppercase;margin-top:8px;opacity:.8;padding-left:calc(clamp(3px,.45vw,6px)*10)}
+/* phone */
+.phone-bg{background:var(--stone);padding:8% 0;display:grid;place-items:center;height:100%}
+.phone{width:min(300px,78%);background:#0b0b0b;border-radius:40px;padding:10px;box-shadow:0 40px 70px -30px rgba(0,0,0,.6)}
+.phone-in{background:#fff;border-radius:31px;overflow:hidden;font-size:11px}
+.ph-top{display:flex;align-items:center;gap:12px;padding:30px 14px 12px}
+.ph-av{width:56px;height:56px;border-radius:50%;background:var(--red);display:grid;place-items:center;flex:none}
+.ph-av svg{height:58%;width:auto}
+.ph-stats{display:flex;gap:14px;flex:1;justify-content:space-around;text-align:center;font-size:10px;color:#666}
+.ph-stats b{display:block;font-size:13px;color:#111}
+.ph-bio{padding:0 14px 12px;line-height:1.45}
+.ph-bio b{font-size:12px}
+.ph-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.ph-grid div{aspect-ratio:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:10%;font-family:var(--serif);font-size:13px;line-height:1.1;text-align:center}
+.ph-grid .r{background:var(--red);color:#fff}.ph-grid .i{background:var(--ink);color:#fff}.ph-grid .p{background:var(--parchment);color:var(--ink)}
+.ph-grid .ln::after{content:"";position:absolute;left:24%;right:0;bottom:18%;height:3px;background:currentColor}
+.ph-grid .ln::before{content:"";position:absolute;left:24%;bottom:18%;width:3px;height:44%;background:currentColor}
+.ph-grid .ln i{position:absolute;left:16%;bottom:52%;width:19px;height:3px;background:currentColor}
+.ph-grid .p.ln::after,.ph-grid .p.ln::before,.ph-grid .p.ln i{background:var(--red)}
+/* programme */
+.prog{background:#cfc6b8;padding:7%;display:grid;place-items:center;height:100%}
+.prog-in{width:100%;aspect-ratio:1.414/1;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 30px 50px -25px rgba(0,0,0,.45)}
+.prog .back{background:var(--parchment);padding:9%;font-size:clamp(8px,.85vw,11px);color:var(--slate);display:flex;flex-direction:column;gap:6px}
+.prog .back h5{font-family:var(--serif);font-weight:500;font-size:clamp(14px,1.5vw,20px);color:var(--ink);margin-bottom:4px}
+.prog .row{display:flex;justify-content:space-between;border-bottom:1px solid var(--rule);padding:4px 0}
+.prog .front{background:#fff;padding:9% 0 9% 9%;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.prog .front img{width:82%}
+.prog .front .xline{--t:clamp(2px,.3vw,4px);padding-left:calc(var(--t)*10)}
+.prog .front h5{font-family:var(--serif);font-weight:500;font-size:clamp(15px,1.7vw,22px);line-height:1}
+.prog .front small{font-size:clamp(7px,.7vw,9px);font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);display:block;margin:0 0 4px calc(clamp(2px,.3vw,4px)*10)}
+/* letterhead */
+.lh-bg{background:#bdb3a4;padding:8% 0 0;display:flex;justify-content:center;align-items:flex-end}
+.lh{width:72%;aspect-ratio:1/1.32;background:#fff;box-shadow:0 30px 50px -25px rgba(0,0,0,.45);padding:9% 0 7% 9%;display:flex;flex-direction:column;overflow:hidden}
+.lh img{width:46%}
+.lh .ln{height:6px;background:#eeeae4;border-radius:3px;margin:0 9% 9px 0}
+.lh .body{flex:1;padding-top:14%}
+.lh .xline{--t:2.5px;padding-left:calc(var(--t)*10)}
+.lh .xline span{font-size:clamp(6px,.62vw,8px);color:var(--slate);letter-spacing:.06em}
+/* cards */
+.cards{background:var(--stone);aspect-ratio:4/3.8;position:relative}
+.bc{position:absolute;width:62%;aspect-ratio:85/55;border-radius:8px;box-shadow:0 20px 40px -18px rgba(0,0,0,.45);overflow:hidden}
+.bc.f{left:6%;top:8%;background:#fff;display:grid;place-items:center;padding:8%;transform:rotate(-4deg)}
+.bc.b{right:6%;bottom:8%;background:var(--red);color:#fff;padding:7% 0 7% 8%;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(3deg)}
+.bc .nm{font-family:var(--serif);font-size:clamp(14px,1.5vw,20px);line-height:1}
+.bc .rl{font-size:clamp(7px,.65vw,9px);letter-spacing:.14em;text-transform:uppercase;opacity:.8;margin-top:3px}
+.bc .xline{--t:2.5px;--c:#fff;padding-left:calc(var(--t)*10)}
+.bc .ct{font-size:clamp(7px,.65vw,9px);line-height:1.6;opacity:.9}
+/* tote */
+.tote-bg{background:var(--red);aspect-ratio:4/3.8;display:grid;place-items:center}
+.tote-bg svg{width:60%;height:auto;filter:drop-shadow(0 30px 30px rgba(0,0,0,.35))}
+/* banner */
+.banner-bg{background:#d9d2c6;aspect-ratio:4/3.8;display:flex;align-items:flex-end;justify-content:center;padding-top:7%}
+.banner{width:46%;height:90%;background:var(--ink);color:#fff;padding:10% 0 0 9%;display:flex;flex-direction:column;justify-content:space-between;position:relative;box-shadow:0 30px 40px -20px rgba(0,0,0,.5)}
+.banner img{width:86%}
+.banner h5{font-family:var(--serif);font-weight:500;font-size:clamp(20px,2.3vw,32px);line-height:1;margin:0 10% 10% 0}
+.banner .xline{--t:3px;--c:#fff;padding-left:calc(var(--t)*10);margin-bottom:16%}
+.banner small{font-size:clamp(7px,.75vw,10px);letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+/* email */
+.sig{background:var(--parchment);border-radius:20px;padding:28px 32px;display:flex;flex-wrap:wrap;gap:24px 36px;align-items:center}
+.sig img{height:52px;width:auto}
+.sig .who{font-size:15px;font-weight:600}.sig .who span{display:block;font-weight:400;color:var(--slate);font-size:13px}
+.sig .ct{font-size:13px;color:var(--slate);line-height:1.6}
+
+/* ═══ 13 MERCH ═══ */
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.ph{grid-column:span 4;position:relative;border-radius:18px;overflow:hidden;height:clamp(220px,26vw,360px);cursor:zoom-in;background:#1c1c1c}
+.ph.w7{grid-column:span 7}.ph.w5{grid-column:span 5}
+.ph.full{grid-column:span 12;height:auto}.ph.full img{height:auto}
+.ph.full figcaption{color:#fff}
+.dark-rules div{border-top-color:var(--rule)!important}.dark-rules p{color:var(--slate)!important}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.ph:hover img{transform:scale(1.06)}
+.ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-family:var(--serif);font-size:20px}
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(10,10,10,.94);display:grid;grid-template-columns:64px 1fr 64px;align-items:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox figure{display:flex;flex-direction:column;align-items:center;gap:14px;min-width:0}
+.lightbox img{max-width:100%;max-height:80vh;border-radius:12px}
+.lightbox figcaption{color:#fff;font-family:var(--serif);font-size:22px}
+.lb-nav,.lb-x{color:#fff;font-size:24px;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.08);transition:background .2s}
+.lb-nav:hover,.lb-x:hover{background:var(--red)}
+.lb-x{position:absolute;top:20px;right:20px;font-size:18px}
+
+/* ═══ 13 STUDIO ═══ */
+.studio{display:grid;grid-template-columns:360px minmax(0,1fr);gap:20px;align-items:start}
+.panel{background:var(--white);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:18px}
+.fld label{display:block;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
+.fld input,.fld textarea{width:100%;border:1px solid var(--rule);border-radius:12px;padding:12px 14px;font-size:15px;background:var(--parchment);outline:none;transition:border-color .2s}
+.fld input:focus,.fld textarea:focus{border-color:var(--red)}
+.fld textarea{min-height:110px;resize:vertical;font-family:var(--serif);font-size:19px;line-height:1.35}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills button{padding:9px 14px;border-radius:999px;background:var(--parchment);font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px}
+.pills button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.pills i{width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--red);color:#fff;border-radius:14px;padding:15px 18px;font-weight:700;font-size:15px;transition:background .2s,transform .2s}
+.cta:hover{background:var(--red-deep)}
+.cta:active{transform:scale(.98)}
+.preview{background:var(--stone);border-radius:22px;padding:clamp(20px,4vw,48px);display:grid;place-items:center;min-height:520px}
+.preview canvas{max-width:100%;max-height:70vh;width:auto;height:auto;border-radius:6px;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+
+/* ═══ 14 DOWNLOADS ═══ */
+.dl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dl-item{border-radius:20px;overflow:hidden;background:var(--parchment);display:flex;flex-direction:column}
+.dl-art{height:170px;display:grid;place-items:center;padding:28px}
+.dl-art img{max-height:100%;max-width:100%;width:auto}
+.dl-art svg{height:80px;width:auto;max-width:100%}
+.dl-meta{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--parchment)}
+.dl-meta b{font-size:14px}.dl-meta small{display:block;font-size:12px;color:var(--slate)}
+.dl-meta a{flex:none;font-size:12px;font-weight:700;letter-spacing:.08em;color:#fff;text-decoration:none;padding:9px 14px;border-radius:10px;background:var(--ink);transition:background .2s}
+.dl-meta a:hover{background:var(--red)}
+
+/* ═══ BACK ═══ */
+#back{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+#back .xline{--t:clamp(9px,1.55vw,22px);padding-left:calc(var(--t)*10)}
+#back h2{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(44px,8vw,128px);line-height:.95}
+.back-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:72px}
+.back-foot img{width:clamp(200px,22vw,300px)}
+.back-foot p{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width:1020px){
+  .grid2,.grid-side,.vs,.studio{grid-template-columns:1fr}
+  .parts,.keywords,.traits{grid-template-columns:1fr 1fr}
+  .device,.tiles,.dl{grid-template-columns:1fr 1fr}
+  .sw-row.four{grid-template-columns:1fr 1fr}
+  .app,.app.w7,.app.w5,.app.w4,.app.w8{grid-column:span 12}
+  .ph,.ph.w7,.ph.w5{grid-column:span 6}
+  .ph.full{grid-column:span 12}
+  .contents,.toc-grid{grid-template-columns:1fr}
+  .vs-pick{flex-direction:row;flex-wrap:wrap}.vs-pick button{flex:1 1 200px}
+  .nav-now{display:none}
+}
+@media (max-width:640px){
+  .parts,.keywords,.traits,.device,.tiles,.dl,.donts,.faces,.say,.rules,.sizes,.sw-row,.sw-row.four{grid-template-columns:1fr}
+  .squares{grid-template-columns:1fr 1fr}
+  .spec{grid-template-columns:1fr;gap:4px}
+  .srow{grid-template-columns:1fr;gap:6px}
+  .contents small{display:none}
+  .nav-brand span{display:none}
+  .tester-out{font-size:44px}
+  .cover-top img{width:180px}
+  .cover-meta{display:none}
+  .vs-stage{min-height:300px}
+  .balance div{font-size:10px;padding:8px 6px}
+  table.contrast th:nth-child(3),table.contrast td:nth-child(3){display:none}
+  .lh{width:84%}.banner{width:62%}
+  .ph,.ph.w7,.ph.w5{grid-column:span 12;height:240px}
+  .ph.full{height:auto}
+  .rules{grid-template-columns:1fr}
+  .lightbox{grid-template-columns:40px 1fr 40px;padding:12px}.lb-nav{width:36px;height:36px;font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv,.js .xline .xs,.js .xline .xb,.js .xline .xt,.js .xline .xh,.mani .last::before{transition:none!important;opacity:1!important;transform:none!important}
+  .isaiah .hl{color:#fff}.isaiah .w::after{transform:none}
+}
+@page{size:A4 landscape;margin:0}
+@media print{
+  .nav,.progress,.toc-overlay,.toast{display:none!important}
+  section{break-after:page;min-height:100vh}
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .js .rv,.js .xline .xs,.js .xline .xb,.js .xline .xt,.js .xline .xh{opacity:1!important;transform:none!important}
+  .isaiah .hl{color:#fff}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#cover"><svg viewBox="0 0 179 342" aria-hidden="true"><g fill="currentColor"><rect y="82" width="179" height="24"/><rect x="77" width="24" height="342"/><rect x="77" y="318" width="102" height="24"/></g></svg><span>Christ Extension Church</span></a>
+  <div class="nav-now" id="navNow">Brand Book</div>
+  <button class="nav-btn" id="tocOpen" aria-label="Open contents"><i></i>Contents</button>
+</header>
+<div class="progress" id="progress"></div>
+
+<div class="toc-overlay" id="toc" aria-hidden="true">
+  <button class="toc-close" id="tocClose">Close ✕</button>
+  <ol class="toc-grid" id="tocList"></ol>
+</div>
+
+<!-- ═══════════ COVER ═══════════ -->
+<section id="cover" class="on-ink" data-title="Brand Book">
+  <div class="cover-top">
+    <img data-img="white" alt="Christ Extension Church">
+    <div class="cover-meta">Brand identity guidelines<br>Edition 1.0 · 2026</div>
+  </div>
+  <div class="cover-main">
+    <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i>
+      <h1 class="xh">Brand<br>Book.</h1>
+    </div>
+    <div class="cover-sub rv d6">
+      <p>Prospering His pleasure on earth</p>
+      <span>Christ Extension Church Int'l</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ MANIFESTO ═══════════ -->
+<section id="manifesto" class="on-red" data-title="Our Affirmation">
+  <div class="wrap">
+    <p class="mani">
+      <span class="rv">I am Christ's seed.</span>
+      <span class="rv d1">I am His <em>extension;</em></span>
+      <span class="rv d2">prolonging His days</span>
+      <span class="rv d3">and prospering His pleasure</span>
+      <span class="rv d4">here on earth.</span>
+      <span class="rv d5 last">Because I am here, <em>He is here.</em></span>
+    </p>
+    <p class="mani-src rv d6">Our Affirmation</p>
+  </div>
+</section>
+
+<!-- ═══════════ CONTENTS ═══════════ -->
+<section id="contents" class="on-parch" data-title="Contents">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">Contents</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">One church,<br>one voice.</h2></div>
+    </div>
+    <ol class="contents rv" id="contentsList"></ol>
+  </div>
+</section>
+
+<!-- ═══════════ 01 WHO WE ARE ═══════════ -->
+<section id="about" class="on-white" data-title="Who We Are" data-n="01" data-d="Mission &amp; vision">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">01 · Who We Are</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Occupy<br>till I come.</h2></div>
+    </div>
+    <div class="grid-side">
+      <div class="rv">
+        <p class="lede"><b>Christ Extension Church Int'l</b> is a global ministry. Our divine mandate is to bring holistic transformation to God's people through sound, inspiring and revelatory teaching from God's holy and infallible Word.</p>
+        <p class="lede" style="margin-top:20px">We want God's people to live productive, purposeful lives here on earth, aware that what we do here counts in the age to come. We act on our Lord's words in Luke 19:13. Our meetings equip and empower people to be relevant in every sphere of life, with Kingdom influence that lasts for generations, for God's glory.</p>
+        <div class="founders">
+          <svg viewBox="0 0 179 342" aria-hidden="true"><g fill="#B50000"><rect y="82" width="179" height="24"/><rect x="77" width="24" height="342"/><rect x="77" y="318" width="102" height="24"/></g></svg>
+          <div>Founded by<b>Pastor Emmanuel &amp; Sheila Mbai</b></div>
+        </div>
+      </div>
+      <div class="mv">
+        <div class="mv-card rv d1">
+          <div class="k">Our Mission</div>
+          <p>Raising a <b>unique breed of people</b> with the utmost value for God's presence, who have come to see and appreciate that everything about life <b>begins</b>, <b>thrives</b> and <b>culminates</b> in His presence.</p>
+        </div>
+        <div class="mv-card dark rv d2">
+          <div class="k">Our Vision</div>
+          <p>To become the church that Christ envisioned while on the cross, allowing Him to <b>fully function</b>, <b>manifest Himself</b> and <b>prosper His pleasure</b> through us here on earth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 02 FOUNDATION ═══════════ -->
+<section id="foundation" class="on-ink" data-title="Our Foundation" data-n="02" data-d="Isaiah 53:10 &amp; values">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">02 · Our Foundation</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Where our<br>name comes from.</h2></div>
+    </div>
+    <p class="isaiah">
+      <span class="hl">Yet it pleased the Lord to bruise Him; He has put Him to grief. When You make His soul an offering for sin,</span>
+      <span class="hl">He shall see His <span class="w">seed</span>,</span>
+      <span class="hl">He shall <span class="w">prolong</span> His days,</span>
+      <span class="hl">and the <span class="w">pleasure</span> of the Lord shall <span class="w">prosper</span> in His hand.</span>
+    </p>
+    <p class="ref rv">Isaiah 53:10</p>
+
+    <div class="keywords">
+      <div class="rv"><h4>Seed</h4><p>“I am Christ's seed.” We are the fruit of His offering.</p></div>
+      <div class="rv d1"><h4>Extension</h4><p>“I am His extension.” This is our name, and it is drawn as the line that runs out from the cross.</p></div>
+      <div class="rv d2"><h4>Prolong</h4><p>“Prolonging His days.” His life continues through ours.</p></div>
+      <div class="rv d3"><h4>Prosper</h4><p>“Prospering His pleasure here on earth.” This is our tagline.</p></div>
+    </div>
+
+    <div class="k rv">Our Values</div>
+    <ul class="values">
+      <li class="rv"><span>Unfeigned love</span></li>
+      <li class="rv"><span>Faithfulness</span></li>
+      <li class="rv"><span>Commitment</span></li>
+      <li class="rv"><span>Integrity</span></li>
+      <li class="rv"><span>Holistic growth</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════ 03 LOGO ═══════════ -->
+<section id="logo" class="on-parch" data-title="The Logo" data-n="03" data-d="Anatomy">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">03 · The Logo</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">The cross<br>at the centre.</h2></div>
+    </div>
+    <div class="stage rv">
+      <div class="anatomy">
+        <img data-img="full" alt="Christ Extension Church logo">
+        <span class="pin" data-p="1" style="left:17%;top:8%">1</span>
+        <span class="pin" data-p="2" style="left:62%;top:14%">2</span>
+        <span class="pin" data-p="3" style="left:100.5%;top:66%">3</span>
+        <span class="pin" data-p="4" style="left:19%;top:88%">4</span>
+      </div>
+    </div>
+    <div class="parts">
+      <div class="part rv" data-p="1"><b>01</b><strong>The cross</strong><p>Forms the “t” of Christ. Christ comes first in the name, held up by the cross.</p></div>
+      <div class="part rv d1" data-p="2"><b>02</b><strong>The wordmark</strong><p>A classic old-style serif in Ink Black. It feels timeless, steady and trustworthy.</p></div>
+      <div class="part rv d2" data-p="3"><b>03</b><strong>The extension</strong><p>The cross's stem turns and runs on as a line under “Extension Church”, carrying the gospel outward.</p></div>
+      <div class="part rv d3" data-p="4"><b>04</b><strong>The tagline</strong><p>“Prospering His pleasure on earth”, a handwritten promise drawn from Isaiah 53:10.</p></div>
+    </div>
+    <dl class="rv" style="margin-top:36px">
+      <div class="spec"><dt>Wordmark font</dt><dd>Baskerville Old Face, used only in the logo.</dd></div>
+      <div class="spec"><dt>Tagline font</dt><dd>Rage Italic, used only in the logo.</dd></div>
+      <div class="spec"><dt>Artwork</dt><dd>Always use the master vector files from Downloads. Never redraw, retype or rearrange the logo.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═══════════ 04 SPACE ═══════════ -->
+<section id="space" class="on-white" data-title="Clear Space &amp; Size" data-n="04" data-d="Room to breathe">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">04 · Clear Space &amp; Size</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Room to<br>breathe.</h2></div>
+    </div>
+    <div class="grid-side">
+      <div class="rv">
+        <p class="lede">Keep text, images and page edges out of the space around the logo. The unit of measure is <b><i>x</i></b>, the height of the capital “E” in Extension.</p>
+        <dl style="margin-top:28px">
+          <div class="spec"><dt>Clear space</dt><dd>At least 1<i>x</i> on every side, which is about 7% of the logo's width.</dd></div>
+          <div class="spec"><dt>Rule of thumb</dt><dd>If in doubt, give it more space.</dd></div>
+        </dl>
+      </div>
+      <div class="rv d1">
+        <div class="stage" style="padding:clamp(20px,4vw,56px)">
+          <div class="cs-box show" id="csBox">
+            <span class="cs-x" style="left:2.2%;top:50%;transform:translateY(-50%)">x</span>
+            <span class="cs-x" style="right:2.2%;top:50%;transform:translateY(-50%)">x</span>
+            <span class="cs-x" style="left:50%;top:0;transform:translateX(-50%)">x</span>
+            <span class="cs-x" style="left:50%;bottom:0;transform:translateX(-50%)">x</span>
+            <div class="cs-inner"><img data-img="full" alt="Logo with clear space"></div>
+          </div>
+        </div>
+        <button class="toggle" id="csToggle" aria-pressed="true"><i></i>Show clear space</button>
+      </div>
+    </div>
+    <div class="sizes">
+      <div class="size rv"><div class="art"><img data-img="full" alt="" style="width:200px"></div><div><b>Full logo</b><small>Min. 50 mm print · 200 px screen. Below this size the tagline can't be read.</small></div></div>
+      <div class="size rv d1"><div class="art"><img data-img="wordmark" alt="" style="width:120px"></div><div><b>Without tagline</b><small>Min. 30 mm print · 120 px screen. Use it for small sizes only.</small></div></div>
+      <div class="size rv d2"><div class="art"><img data-img="markRed" alt="" style="width:120px"></div><div><b>The Mark</b><small>Min. 30 mm print · 120 px screen, measured along the tail.</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 05 VERSIONS ═══════════ -->
+<section id="versions" class="on-parch" data-title="Logo Versions" data-n="05" data-d="Every background">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">05 · Logo Versions</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">The right logo,<br>every time.</h2></div>
+    </div>
+    <p class="lede rv" style="max-width:760px;margin-bottom:36px">Full colour on light backgrounds. All white on everything dark, red or photographic. <b>Choose a background below</b> and the guide shows the version to use.</p>
+    <div class="vs rv">
+      <div class="vs-stage" id="vsStage" style="background:#fff">
+        <img id="vsImg" data-img="full" alt="Logo preview">
+        <div class="vs-cap" id="vsCap"><span>White</span><span>Full colour</span></div>
+      </div>
+      <div class="vs-pick" id="vsPick">
+        <button data-bg="#FFFFFF" data-v="full" data-n="White" aria-pressed="true"><i style="background:#fff"></i><span>White<small>Full colour</small></span></button>
+        <button data-bg="#F7F3EC" data-v="full" data-n="Parchment" aria-pressed="false"><i style="background:#F7F3EC"></i><span>Parchment<small>Full colour</small></span></button>
+        <button data-bg="photo-light" data-v="full" data-n="Light photo" aria-pressed="false"><i class="photo-light"></i><span>Light photography<small>Full colour</small></span></button>
+        <button data-bg="#B50000" data-v="white" data-n="Cross Red" aria-pressed="false"><i style="background:#B50000"></i><span>Cross Red<small>All white</small></span></button>
+        <button data-bg="#111111" data-v="white" data-n="Ink Black" aria-pressed="false"><i style="background:#111"></i><span>Ink Black<small>All white</small></span></button>
+        <button data-bg="photo-dark" data-v="white" data-n="Dark photo" aria-pressed="false"><i class="photo-dark"></i><span>Dark photography<small>All white</small></span></button>
+        <button data-bg="#FFFFFF" data-v="black" data-n="One colour" aria-pressed="false"><i style="background:linear-gradient(135deg,#fff 50%,#111 50%)"></i><span>One-colour print<small>All black</small></span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 06 MARK ═══════════ -->
+<section id="mark" class="on-white" data-title="The Mark" data-n="06" data-d="Cross &amp; extension">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">06 · The Mark</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">The cross<br>and its reach.</h2></div>
+    </div>
+    <div class="grid-side" style="margin-bottom:48px">
+      <p class="lede rv">The mark is the “t” from the logo on its own: the cross, with its stem turning and running out into a long tail. It says <b>Christ, extended</b> without a single word.</p>
+      <p class="lede rv d1">Use it where the church is already named nearby, such as a profile, a stage screen or merchandise, and as the signature graphic that ties all our materials together.</p>
+    </div>
+    <div class="mark-hero rv">
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i></div>
+    </div>
+
+    <div class="grid-side" style="margin-top:64px;align-items:center">
+      <div class="rv">
+        <h3>Construction</h3>
+        <p class="lede">Every part is measured in <b>T</b>, the thickness of the stroke. The crossbar is centred on the stem. The tail has no fixed length. It reaches as far as the layout allows.</p>
+      </div>
+      <div class="stage rv d1" style="padding:clamp(20px,3vw,40px)">
+        <svg class="construct" viewBox="0 0 720 440" role="img" aria-label="Construction of the mark in units of stroke thickness T">
+          <defs><linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#B50000"/><stop offset="1" stop-color="#B50000" stop-opacity="0"/></linearGradient></defs>
+          <g transform="translate(120,50)">
+            <rect class="m" x="0" y="82" width="179" height="24"/>
+            <rect class="m" x="77" y="0" width="24" height="342"/>
+            <rect x="77" y="318" width="520" height="24" fill="url(#fade)"/>
+            <path class="dim" d="M0 64V54M179 64V54M0 59H179"/>
+            <text class="lab" x="89.5" y="46" text-anchor="middle">7.5 T</text>
+            <path class="dim" d="M210 0H220M210 82H220M215 0V82"/>
+            <text class="lab" x="228" y="46">3.4 T</text>
+            <path class="dim" d="M77 160H67M101 160H111"/>
+            <text class="lab r" x="89" y="190" text-anchor="middle">T</text>
+            <path class="dim" d="M0 122V132M77 122V132M0 127H77"/>
+            <text class="lab" x="38" y="150" text-anchor="middle">3.2 T</text>
+            <path class="dim" d="M-30 0H-40M-30 342H-40M-35 0V342"/>
+            <text class="lab" x="-48" y="176" text-anchor="end">14.25 T</text>
+            <path class="dim" d="M101 372V382M101 377H560" stroke-dasharray="4 5"/>
+            <text class="lab r" x="330" y="404" text-anchor="middle">Tail · runs to the edge →</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="tiles" style="margin-top:56px">
+      <div class="rv"><div class="tile plain" style="background:#fff;box-shadow:inset 0 0 0 1px var(--rule)"><div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i></div></div><div class="tile-cap">Red on white: primary</div></div>
+      <div class="rv d1"><div class="tile on-red"><div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i></div></div><div class="tile-cap">White on Cross Red</div></div>
+      <div class="rv d2"><div class="tile on-ink"><div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i></div></div><div class="tile-cap">White on Ink Black</div></div>
+    </div>
+
+    <div class="grid-side" style="margin-top:72px">
+      <div class="rv">
+        <h3>Square spaces</h3>
+        <p class="lede">Profile pictures, browser tabs and app icons are square, so the full tail can't fit. In these spaces only, the tail stops in line with the end of the crossbar.</p>
+      </div>
+      <div class="squares rv d1">
+        <div class="sq" style="background:#fff;box-shadow:inset 0 0 0 1px var(--rule)"><svg viewBox="0 0 179 342"><g fill="#B50000"><rect y="82" width="179" height="24"/><rect x="77" width="24" height="342"/><rect x="77" y="318" width="102" height="24"/></g></svg></div>
+        <div class="sq" style="background:var(--red)"><svg viewBox="0 0 179 342"><g fill="#fff"><rect y="82" width="179" height="24"/><rect x="77" width="24" height="342"/><rect x="77" y="318" width="102" height="24"/></g></svg></div>
+        <div class="sq" style="background:var(--ink)"><svg viewBox="0 0 179 342"><g fill="#fff"><rect y="82" width="179" height="24"/><rect x="77" width="24" height="342"/><rect x="77" y="318" width="102" height="24"/></g></svg></div>
+        <div class="sq round" style="background:var(--red)"><svg viewBox="0 0 179 342"><g fill="#fff"><rect y="82" width="179" height="24"/><rect x="77" width="24" height="342"/><rect x="77" y="318" width="102" height="24"/></g></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 07 THE EXTENSION LINE ═══════════ -->
+<section id="device" class="on-ink" data-title="The Extension Line" data-n="07" data-d="Our graphic device">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">07 · The Extension Line</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Words that stand<br>on the line.</h2></div>
+    </div>
+    <p class="lede rv" style="max-width:780px;margin-bottom:48px">In the logo, “Extension Church” stands on the line that runs out from the cross. We use the same move everywhere: <b>a title, a name or a date standing on the extension line</b>, with the line running out to the edge. You've seen it at the top of every chapter in this book.</p>
+    <div class="device">
+      <div class="dv rv">
+        <p class="c">Headlines: the title stands on the line, and the line runs to the edge.</p>
+        <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h4 class="xh">Prolonging<br>His Days</h4></div>
+      </div>
+      <div class="dv light rv d1">
+        <p class="c">Names and captions: speakers, ministries and events.</p>
+        <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h4 class="xh">Youth Ministry<span style="display:block;font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-top:8px">Fridays · 6 pm</span></h4></div>
+      </div>
+      <div class="dv red rv d2">
+        <p class="c" style="color:rgba(255,255,255,.8)">Closing lines: the last thing on a post, slide or page.</p>
+        <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h4 class="xh" style="font-style:italic">Because I am here,<br>He is here.</h4></div>
+      </div>
+    </div>
+    <div class="rules">
+      <div class="rv"><b>Always from the cross</b><p>The line always starts at the cross. It is never a loose underline on its own.</p></div>
+      <div class="rv d1"><b>Always to the edge</b><p>Let the tail run off the page or screen. Don't stop it halfway or curve it.</p></div>
+      <div class="rv d2"><b>One per layout</b><p>Use it once per page, slide or post. Used more often, it stops meaning anything.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 08 MISUSE ═══════════ -->
+<section id="misuse" class="on-parch" data-title="Logo Misuse" data-n="08" data-d="What to avoid">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">08 · Logo Misuse</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Please<br>don't.</h2></div>
+    </div>
+    <div class="donts">
+      <div class="dont rv"><div class="st"><img data-img="full" alt="" style="transform:scaleX(1.3) scaleY(.75)"></div><p><strong>Stretch or squash it</strong>Always scale in proportion.</p></div>
+      <div class="dont rv d1"><div class="st"><img data-img="full" alt="" style="filter:hue-rotate(215deg) saturate(1.4)"></div><p><strong>Recolour it</strong>Only use the approved versions.</p></div>
+      <div class="dont rv d2"><div class="st"><img data-img="full" alt="" style="transform:rotate(-12deg)"></div><p><strong>Rotate or tilt it</strong>The cross always stands upright.</p></div>
+      <div class="dont rv"><div class="st"><img data-img="full" alt="" style="filter:drop-shadow(6px 6px 3px rgba(0,0,0,.55))"></div><p><strong>Add effects</strong>No shadows, glows, outlines or bevels.</p></div>
+      <div class="dont rv d1"><div class="st" style="background:var(--ink)"><img data-img="full" alt=""></div><p><strong>Use full colour on dark</strong>Use the all-white version.</p></div>
+      <div class="dont rv d2"><div class="st" style="background:repeating-linear-gradient(60deg,#d9a441 0 18px,#3a7bd5 18px 36px,#8bc34a 36px 54px)"><img data-img="full" alt=""></div><p><strong>Place it on busy backgrounds</strong>It has to stay readable.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 09 COLOUR ═══════════ -->
+<section id="colour" class="on-white" data-title="Colour" data-n="09" data-d="Palette &amp; contrast">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">09 · Colour</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Red, black and<br>plenty of light.</h2></div>
+    </div>
+    <p class="lede rv" style="max-width:760px;margin-bottom:36px">Cross Red comes straight from the logo. Save it for the cross, for calls to action, and for moments that matter. <b>Click any code to copy it.</b></p>
+    <div class="sw-hero rv">
+      <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap"><p class="k" style="color:rgba(255,255,255,.75)">Primary</p><p class="from">The colour of the cross. It is used sparingly, so it always means something.</p></div>
+      <div>
+        <h3>Cross Red</h3>
+        <div class="codes" style="margin-top:22px">
+          <button class="code" data-copy="#B50000"><em>HEX</em>#B50000</button>
+          <button class="code" data-copy="181, 0, 0"><em>RGB</em>181 0 0</button>
+          <button class="code" data-copy="0, 100, 100, 29"><em>CMYK</em>0 100 100 29</button>
+          <button class="code" data-copy="7621 C"><em>PANTONE</em>≈ 7621 C*</button>
+        </div>
+      </div>
+    </div>
+    <div class="sw-row">
+      <div class="sw rv" style="background:var(--ink);color:#fff"><h4>Ink Black<small>Text, dark backgrounds</small></h4><div class="codes"><button class="code" data-copy="#111111"><em>HEX</em>#111111</button><button class="code" data-copy="0, 0, 0, 100"><em>CMYK</em>0 0 0 100</button></div></div>
+      <div class="sw rv d1 dark-codes" style="background:var(--parchment)"><h4>Parchment<small>Warm page backgrounds</small></h4><div class="codes"><button class="code" data-copy="#F7F3EC"><em>HEX</em>#F7F3EC</button><button class="code" data-copy="247, 243, 236"><em>RGB</em>247 243 236</button></div></div>
+      <div class="sw rv d2 dark-codes" style="background:#fff;box-shadow:inset 0 0 0 1px var(--rule)"><h4>White<small>Clean space</small></h4><div class="codes"><button class="code" data-copy="#FFFFFF"><em>HEX</em>#FFFFFF</button></div></div>
+    </div>
+    <div class="sw-row four">
+      <div class="sw rv" style="background:var(--red-deep);color:#fff;min-height:170px"><h4>Deep Wine<small>Hover, dark accents</small></h4><div class="codes"><button class="code" data-copy="#7E0000"><em>HEX</em>#7E0000</button></div></div>
+      <div class="sw rv d1 dark-codes" style="background:var(--stone);min-height:170px"><h4>Stone<small>Panels, dividers</small></h4><div class="codes"><button class="code" data-copy="#E6DFD3"><em>HEX</em>#E6DFD3</button></div></div>
+      <div class="sw rv d2" style="background:var(--slate);color:#fff;min-height:170px"><h4>Slate<small>Secondary text</small></h4><div class="codes"><button class="code" data-copy="#5C5752"><em>HEX</em>#5C5752</button></div></div>
+      <div class="sw rv d3 dark-codes" style="background:var(--red-20);min-height:170px"><h4>Blush<small>Red 20% tint</small></h4><div class="codes"><button class="code" data-copy="#F0CCCC"><em>HEX</em>#F0CCCC</button></div></div>
+    </div>
+    <div class="tints rv">
+      <button data-copy="#B50000" style="background:#B50000;color:#fff">100</button>
+      <button data-copy="#C43333" style="background:#C43333;color:#fff">80</button>
+      <button data-copy="#D36666" style="background:#D36666;color:#fff">60</button>
+      <button data-copy="#E19999" style="background:#E19999">40</button>
+      <button data-copy="#F0CCCC" style="background:#F0CCCC">20</button>
+    </div>
+
+    <div class="grid2" style="margin-top:64px">
+      <div class="rv">
+        <h3>Colour balance</h3>
+        <p class="lede">Most layouts are mostly light, with Ink for weight and a small amount of red for meaning.</p>
+        <div class="balance">
+          <div style="flex:60;background:var(--parchment);box-shadow:inset 0 0 0 1px var(--rule)">60% light</div>
+          <div style="flex:25;background:var(--ink);color:#fff">25% ink</div>
+          <div style="flex:10;background:var(--stone)">10%</div>
+          <div style="flex:5;background:var(--red);color:#fff">5%</div>
+        </div>
+        <p class="note" style="margin-top:14px">*The Pantone match is approximate. Proof against a Pantone guide before ordering signage or merchandise.</p>
+      </div>
+      <div class="rv d1">
+        <h3>Readable pairings</h3>
+        <table class="contrast">
+          <thead><tr><th>Text on background</th><th>Ratio</th><th>WCAG</th><th>Body text</th></tr></thead>
+          <tbody>
+            <tr><td><span class="pair" style="background:#fff;color:#111;box-shadow:inset 0 0 0 1px var(--rule)">Ink on White</span></td><td>18.9:1</td><td>AAA</td><td class="ok">Yes</td></tr>
+            <tr><td><span class="pair" style="background:#fff;color:#B50000;box-shadow:inset 0 0 0 1px var(--rule)">Red on White</span></td><td>7.1:1</td><td>AAA</td><td class="ok">Yes</td></tr>
+            <tr><td><span class="pair" style="background:#B50000;color:#fff">White on Red</span></td><td>7.1:1</td><td>AAA</td><td class="ok">Yes</td></tr>
+            <tr><td><span class="pair" style="background:#F7F3EC;color:#5C5752">Slate on Parchment</span></td><td>6.5:1</td><td>AA</td><td class="ok">Yes</td></tr>
+            <tr><td><span class="pair" style="background:#111;color:#B50000">Red on Ink</span></td><td>2.7:1</td><td>Fail</td><td class="no">Never</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 10 TYPE ═══════════ -->
+<section id="type" class="on-parch" data-title="Typography" data-n="10" data-d="Typefaces &amp; scale">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">10 · Typography</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Classic voice,<br>clear reading.</h2></div>
+    </div>
+    <p class="lede rv" style="max-width:780px;margin-bottom:36px">The logo's own fonts, Baskerville Old Face and Rage Italic, are reserved for the logo. For everything else, <b>EB Garamond</b> continues the wordmark's classic serif voice. Use it for headings, scripture and reflection. <b>Source Sans 3</b> handles anything that needs to be read quickly, such as notices, times and directions. Both are free on Google Fonts. In Word documents, use Garamond and Calibri.</p>
+    <div class="faces">
+      <div class="face rv"><div class="aa" style="font-family:var(--serif)">Aa</div><div class="nm" style="font-family:var(--serif);font-size:30px;font-weight:500">EB Garamond</div><div class="rl">Headings · Scripture · Quotes · Regular, Medium, Italic</div><div class="gl" style="font-family:var(--serif)">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 “ ” &amp; ! ?</div></div>
+      <div class="face rv d1"><div class="aa" style="font-weight:300">Aa</div><div class="nm">Source Sans 3</div><div class="rl">Body · Notices · Interface · Light, Regular, Semibold, Bold</div><div class="gl">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 @ # % ( ) : ;</div></div>
+    </div>
+    <div class="tester rv">
+      <div class="tester-bar">
+        <span>Try it, type below</span>
+        <div class="seg" id="tFace"><button data-f="serif" aria-pressed="true">Garamond</button><button data-f="sans" aria-pressed="false">Source Sans</button></div>
+        <div class="seg" id="tStyle"><button data-s="normal" aria-pressed="true">Roman</button><button data-s="italic" aria-pressed="false">Italic</button></div>
+        <label style="display:flex;align-items:center;gap:10px">Size <input type="range" id="tSize" min="24" max="140" value="72"></label>
+      </div>
+      <div class="tester-out" id="tOut" contenteditable="true" spellcheck="false">Because I am here, He is here.</div>
+    </div>
+    <div class="scale rv">
+      <div class="srow"><div class="lb">Display<span>Garamond 500 · 64 / 64</span></div><div style="font-family:var(--serif);font-size:clamp(38px,5vw,64px);line-height:1">Occupy till I come.</div></div>
+      <div class="srow"><div class="lb">Heading<span>Garamond 500 · 34 / 40</span></div><div style="font-family:var(--serif);font-size:clamp(26px,3vw,34px)">This Sunday's service</div></div>
+      <div class="srow"><div class="lb">Scripture<span>Garamond Italic · 24 / 34</span></div><div style="font-family:var(--serif);font-style:italic;font-size:clamp(20px,2vw,24px);line-height:1.45">“And the pleasure of the Lord shall prosper in His hand.” <span style="font-style:normal;font-family:var(--sans);font-size:12px;letter-spacing:.16em;color:var(--red);font-weight:700">ISAIAH 53:10</span></div></div>
+      <div class="srow"><div class="lb">Eyebrow<span>Sans Bold · 11 · +20% tracking</span></div><div style="font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red)">Youth Ministry · Fridays 6 pm</div></div>
+      <div class="srow"><div class="lb">Body<span>Sans Regular · 17 / 28</span></div><div style="font-size:17px;line-height:1.65;color:#333;max-width:640px">Everyone is welcome. Doors open thirty minutes before service, and the welcome team will help you find a seat, children's church and refreshments afterwards.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 11 VOICE ═══════════ -->
+<section id="voice" class="on-ink" data-title="Voice &amp; Tone" data-n="11" data-d="How we speak">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">11 · Voice &amp; Tone</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Words that<br>welcome.</h2></div>
+    </div>
+    <p class="lede rv" style="max-width:740px;margin-bottom:40px">We speak the way a good host greets a guest at the door: warmly and plainly, and rooted in the Word. We always capitalise <b>He, His and Him</b> when we refer to God.</p>
+    <div class="traits">
+      <div class="trait rv"><h4>Welcoming</h4><p>Write for the first-time visitor. Explain, don't assume.</p><small>Not cliquey or full of jargon</small></div>
+      <div class="trait rv d1"><h4>Revelatory</h4><p>Teach from the Word, and let scripture carry the weight.</p><small>Not preachy or vague</small></div>
+      <div class="trait rv d2"><h4>Purposeful</h4><p>Point to productive, Kingdom-minded living, now and for eternity.</p><small>Not fearful or guilt-driven</small></div>
+      <div class="trait rv d3"><h4>Clear</h4><p>Short sentences. Time, place and next step, every time.</p><small>Not wordy</small></div>
+    </div>
+    <div class="say">
+      <div class="yes rv"><div class="k">We say</div><ul><li>“You're welcome here, just as you are.”</li><li>“Join us Sunday at 10 am. Parking is behind the hall.”</li><li>“What we do here counts in the age to come.”</li></ul></div>
+      <div class="nope rv d1"><div class="k">We avoid</div><ul><li>“All members are hereby reminded that attendance is mandatory.”</li><li>“Don't miss out or you'll regret it!!!”</li><li>“Pre-service intercessory convocation, 0900 hrs.”</li></ul></div>
+    </div>
+    <dl class="rv" style="margin-top:48px">
+      <div class="spec"><dt>Our name</dt><dd>“Christ Extension Church Int'l” in formal documents, and “Christ Extension Church” everywhere else. Write it in full the first time and use “CEC” after that, but never on its own in a headline.</dd></div>
+      <div class="spec"><dt>Our tagline</dt><dd>“Prospering His pleasure on earth”, from Isaiah 53:10, with a capital H and no full stop.</dd></div>
+      <div class="spec"><dt>Capitals</dt><dd>Sentence case for headings and buttons. Capitals only for short labels.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═══════════ 12 IN PRACTICE ═══════════ -->
+<section id="apps" class="on-white" data-title="In Practice" data-n="12" data-d="Applications">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">12 · In Practice</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">The brand<br>at work.</h2></div>
+    </div>
+    <div class="apps">
+      <div class="app w8 rv">
+        <div class="mock screen"><div class="screen-in">
+          <p class="k">Sunday Series · Part 2</p>
+          <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h4 class="xh">Prolonging<br>His Days</h4></div>
+        </div></div>
+        <div class="cap">Stage screen · sermon title slide</div>
+      </div>
+      <div class="app w4 rv d1">
+        <div class="mock phone-bg"><div class="phone"><div class="phone-in">
+          <div class="ph-top">
+            <div class="ph-av"><svg viewBox="0 0 179 342"><g fill="#fff"><rect y="82" width="179" height="24"/><rect x="77" width="24" height="342"/><rect x="77" y="318" width="102" height="24"/></g></svg></div>
+            <div class="ph-stats"><div><b>248</b>posts</div><div><b>3.1k</b>followers</div><div><b>12</b>following</div></div>
+          </div>
+          <div class="ph-bio"><b>Christ Extension Church Int'l</b><br>Prospering His pleasure on earth.<br>Sundays · 10 am</div>
+          <div class="ph-grid">
+            <div class="r">Occupy till I come.</div><div class="p ln"><i></i></div><div class="i">Because I am here, He is here.</div>
+            <div class="i ln"><i></i></div><div class="r" style="font-style:italic">Seed.</div><div class="p">Sunday 10 am</div>
+            <div class="p" style="font-style:italic">Prosper.</div><div class="r ln"><i></i></div><div class="i">Youth night</div>
+          </div>
+        </div></div></div>
+        <div class="cap">Instagram profile</div>
+      </div>
+
+      <div class="app w7 rv">
+        <div class="mock live">
+          <div class="tag">LIVE</div>
+          <div class="lt">
+            <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><b class="xh">Pastor Emmanuel Mbai</b></div>
+            <span>Christ Extension Church Int'l</span>
+          </div>
+        </div>
+        <div class="cap">Livestream lower-third</div>
+      </div>
+      <div class="app w5 rv d1">
+        <div class="mock prog"><div class="prog-in">
+          <div class="back">
+            <h5>Order of service</h5>
+            <div class="row"><span>Praise &amp; worship</span><span>10:00</span></div>
+            <div class="row"><span>Welcome &amp; notices</span><span>10:40</span></div>
+            <div class="row"><span>Offering</span><span>10:50</span></div>
+            <div class="row"><span>The Word</span><span>11:00</span></div>
+            <div class="row"><span>Prayer &amp; blessing</span><span>11:45</span></div>
+          </div>
+          <div class="front">
+            <img data-img="full" alt="">
+            <div><small>Sunday Service</small><div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h5 class="xh">Because I am here,<br>He is here.</h5></div></div>
+          </div>
+        </div></div>
+        <div class="cap">Sunday programme · A5 folded</div>
+      </div>
+
+      <div class="app w4 rv">
+        <div class="mock lh-bg"><div class="lh">
+          <img data-img="full" alt="">
+          <div class="body"><div class="ln" style="width:30%"></div><div class="ln" style="width:22%;margin-bottom:22px"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln" style="width:60%"></div><div class="ln" style="margin-top:18px"></div><div class="ln"></div><div class="ln" style="width:45%"></div></div>
+          <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><span class="xh">Address · +254 7XX XXX XXX · email@domain</span></div>
+        </div></div>
+        <div class="cap">Letterhead · A4</div>
+      </div>
+      <div class="app w4 rv d1">
+        <div class="mock cards">
+          <div class="bc f"><img data-img="full" alt=""></div>
+          <div class="bc b">
+            <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><div class="xh"><div class="nm">Full Name</div><div class="rl">Role title</div></div></div>
+            <div class="ct">+254 7XX XXX XXX<br>name@domain<br>Church address</div>
+          </div>
+        </div>
+        <div class="cap">Business cards · 85 × 55 mm</div>
+      </div>
+      <div class="app w4 rv d2">
+        <div class="mock tote-bg">
+          <svg viewBox="0 0 300 340" aria-hidden="true">
+            <path d="M95 70 C95 10 205 10 205 70" fill="none" stroke="#e9e1d4" stroke-width="12"/>
+            <path d="M40 70 H260 L272 330 H28 Z" fill="#F7F3EC"/>
+            <g fill="#B50000" transform="translate(66,150) scale(.3)"><rect y="82" width="179" height="24"/><rect x="77" width="24" height="342"/><rect x="77" y="318" width="590" height="24"/></g>
+            <text x="102" y="226" font-family="EB Garamond, serif" font-size="19" fill="#111">Because I am here,</text>
+            <text x="102" y="246" font-family="EB Garamond, serif" font-size="19" font-style="italic" fill="#111">He is here.</text>
+          </svg>
+        </div>
+        <div class="cap">Merchandise · tote</div>
+      </div>
+
+      <div class="app w4 rv">
+        <div class="mock banner-bg"><div class="banner">
+          <img data-img="white" alt="">
+          <div>
+            <h5>You're welcome<br>here.</h5>
+            <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><small class="xh">Sundays · 10 am</small></div>
+          </div>
+        </div></div>
+        <div class="cap">Pull-up banner · gate</div>
+      </div>
+      <div class="app w8 rv d1" style="align-self:end">
+        <div class="sig">
+          <img data-img="full" alt="">
+          <div class="who">Full Name<span>Role title</span></div>
+          <div class="ct">+254 7XX XXX XXX<br>name@domain</div>
+        </div>
+        <div class="cap">Email signature</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 13 ON SCREEN & OUTDOOR ═══════════ -->
+<section id="digital" class="on-parch" data-title="On Screen &amp; Outdoor" data-n="13" data-d="App &amp; billboards">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">13 · On Screen &amp; Outdoor</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">From the phone<br>to the roadside.</h2></div>
+    </div>
+    <div class="grid-side" style="margin-bottom:48px">
+      <p class="lede rv">On screen and outdoors, the same system holds: warm parchment space, Garamond headlines, Cross Red reserved for the one thing to do next, and the cross leading the eye.</p>
+      <dl class="rv d1">
+        <div class="spec"><dt>App</dt><dd>Use Parchment backgrounds and Garamond headlines. Cross Red is for primary buttons, the active tab and play controls only, so there's one red action per screen.</dd></div>
+        <div class="spec"><dt>Billboards</dt><dd>Keep the headline to five words or fewer, readable in five seconds. Use the logo at full size, with the extension line starting from the cross.</dd></div>
+        <div class="spec"><dt>Imagery</dt><dd>Use warm, natural light. Real people worshipping, or the lamb as a symbol of the offering in Isaiah 53. Never cold, dark or staged.</dd></div>
+      </dl>
+    </div>
+    <div class="gallery">
+      <figure class="ph full rv" data-i="d0"><img data-img="d_app" alt="Church app: welcome, home and messages screens" loading="lazy"><figcaption>Church app: welcome, home and messages</figcaption></figure>
+      <figure class="ph full rv" data-i="d1"><img data-img="d_rooted" alt="Billboard: Rooted in His presence" loading="lazy"><figcaption>Billboard: Rooted in His presence</figcaption></figure>
+      <figure class="ph full rv" data-i="d2"><img data-img="d_welcome" alt="Billboard: You are welcome here" loading="lazy"><figcaption>Billboard: You are welcome here</figcaption></figure>
+    </div>
+    <div class="rules dark-rules">
+      <div class="rv"><b>One red action</b><p>Each app screen gets one red button or control. Everything else stays ink and parchment.</p></div>
+      <div class="rv d1"><b>The line from the cross</b><p>On the “Rooted” billboard, the headline stands on a line that starts at the cross. That is the extension line used correctly.</p></div>
+      <div class="rv d2"><b>No loose rules</b><p>A red line that doesn't start from the cross, like the one under the “Welcome” billboard, should be removed before printing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 13 MERCHANDISE ═══════════ -->
+<section id="merch" class="on-ink" data-title="Merchandise" data-n="14" data-d="Brand in the hand">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">14 · Merchandise</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Carried into<br>the world.</h2></div>
+    </div>
+    <div class="grid-side" style="margin-bottom:48px">
+      <p class="lede rv">Every mug, cap and lanyard carries the name a little further. Apply the logo with the same care as on paper: full colour on light materials, all white on red and black.</p>
+      <dl class="rv d1">
+        <div class="spec"><dt>Printing</dt><dd>Use the vector files (SVG or PDF) from Downloads, and ask suppliers for a printed proof matched to Cross Red.</dd></div>
+        <div class="spec"><dt>Embroidery</dt><dd>On caps and polos, keep the logo at least 60 mm wide so the tagline stitches cleanly. Narrower than that, use the logo without the tagline.</dd></div>
+        <div class="spec"><dt>Small items</dt><dd>For pins, buttons and charms, use the mark alone.</dd></div>
+      </dl>
+    </div>
+    <div class="gallery">
+      <figure class="ph w7 rv" data-i="0"><img data-img="m_mugs" alt="Mugs" loading="lazy"><figcaption>Mugs</figcaption></figure>
+      <figure class="ph w5 rv d1" data-i="1"><img data-img="m_lapel_pins" alt="Lapel pins: the mark in enamel" loading="lazy"><figcaption>Lapel pins: the mark in enamel</figcaption></figure>
+      <figure class="ph w4 rv d2" data-i="2"><img data-img="m_caps" alt="Caps" loading="lazy"><figcaption>Caps</figcaption></figure>
+      <figure class="ph w4 rv" data-i="3"><img data-img="m_umbrella" alt="Umbrellas" loading="lazy"><figcaption>Umbrellas</figcaption></figure>
+      <figure class="ph w4 rv d1" data-i="4"><img data-img="m_bottles" alt="Water bottles" loading="lazy"><figcaption>Water bottles</figcaption></figure>
+      <figure class="ph w5 rv d2" data-i="5"><img data-img="m_book_cover" alt="Publications" loading="lazy"><figcaption>Publications</figcaption></figure>
+      <figure class="ph w7 rv" data-i="6"><img data-img="m_stationery" alt="Letterhead & envelopes" loading="lazy"><figcaption>Letterhead & envelopes</figcaption></figure>
+      <figure class="ph w4 rv d1" data-i="7"><img data-img="m_business_cards" alt="Business cards" loading="lazy"><figcaption>Business cards</figcaption></figure>
+      <figure class="ph w4 rv d2" data-i="8"><img data-img="m_lanyards" alt="Welcome team lanyards" loading="lazy"><figcaption>Welcome team lanyards</figcaption></figure>
+      <figure class="ph w4 rv" data-i="9"><img data-img="m_tote_notebook" alt="Tote & notebook" loading="lazy"><figcaption>Tote & notebook</figcaption></figure>
+      <figure class="ph w7 rv d1" data-i="10"><img data-img="m_polos" alt="Team polos" loading="lazy"><figcaption>Team polos</figcaption></figure>
+      <figure class="ph w5 rv d2" data-i="11"><img data-img="m_pull_up_banner" alt="Entrance pull-up banner" loading="lazy"><figcaption>Entrance pull-up banner</figcaption></figure>
+    </div>
+    <p class="note rv" style="margin-top:20px">Click any photo to enlarge it. These are concept visuals. Check every production proof against these guidelines.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lb" aria-hidden="true">
+  <button class="lb-x" id="lbX" aria-label="Close">✕</button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Previous">←</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb-nav next" id="lbNext" aria-label="Next">→</button>
+</div>
+
+<!-- ═══════════ 13 STUDIO ═══════════ -->
+<section id="studio" class="on-parch" data-title="Post Studio" data-n="15" data-d="Make a post">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">15 · Post Studio</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Make one<br>right now.</h2></div>
+    </div>
+    <p class="lede rv" style="max-width:760px;margin-bottom:36px">A working tool for the media team. Type a message, choose a format and colour, and download a ready-to-post PNG that follows these guidelines.</p>
+    <div class="studio rv">
+      <div class="panel">
+        <div class="fld"><label>Format</label><div class="pills" id="sFormat"><button data-v="square" aria-pressed="true">Post 1:1</button><button data-v="story" aria-pressed="false">Story 9:16</button><button data-v="slide" aria-pressed="false">Screen 16:9</button></div></div>
+        <div class="fld"><label>Colour</label><div class="pills" id="sTheme"><button data-v="red" aria-pressed="true"><i style="background:#B50000"></i>Cross Red</button><button data-v="ink" aria-pressed="false"><i style="background:#111"></i>Ink</button><button data-v="parch" aria-pressed="false"><i style="background:#F7F3EC"></i>Parchment</button></div></div>
+        <div class="fld"><label for="sEyebrow">Label</label><input id="sEyebrow" value="Sunday Service · 10 am" maxlength="48"></div>
+        <div class="fld"><label for="sText">Message</label><textarea id="sText" maxlength="220">Occupy till I come.</textarea></div>
+        <div class="fld"><label for="sRef">On the line</label><input id="sRef" value="Luke 19:13" maxlength="48"></div>
+        <button class="cta" id="sDownload">Download PNG ↓</button>
+      </div>
+      <div class="preview"><canvas id="sCanvas" width="1080" height="1080"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 14 DOWNLOADS ═══════════ -->
+<section id="downloads" class="on-white" data-title="Downloads" data-n="16" data-d="Logo files">
+  <div class="wrap">
+    <div class="chap"><div class="chap-k">16 · Downloads</div>
+      <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Master<br>artwork.</h2></div>
+    </div>
+    <div class="dl" id="dlGrid"></div>
+    <p class="note rv" style="margin-top:28px">All artwork is vector. Use <b>SVG</b> for web and digital, and <b>PDF</b> for print, signage and suppliers. The PNGs are high resolution (4,000+ px) and have transparent backgrounds. PDFs of every version are also in the <i>logos</i> folder that comes with this book.</p>
+  </div>
+</section>
+
+<!-- ═══════════ BACK ═══════════ -->
+<section id="back" class="on-red" data-title="Christ Extension Church">
+  <div class="wrap" style="width:100%">
+    <div class="xline" data-x><i class="xs"></i><i class="xb"></i><i class="xt"></i><h2 class="xh">Because I am here,<br>He is here.</h2></div>
+    <div class="back-foot rv">
+      <img data-img="white" alt="Christ Extension Church">
+      <p>Brand Book · Edition 1.0 · 2026</p>
+    </div>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const IMG = {{IMG_JSON}};
+(function(){
+  const $ = (s, r=document) => r.querySelector(s), $$ = (s, r=document) => [...r.querySelectorAll(s)];
+  $$('img[data-img]').forEach(i => { i.src = IMG[i.dataset.img]; });
+
+  /* reveal */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: .15, rootMargin: '0px 0px -6% 0px'});
+  $$('.rv,[data-x],.isaiah .hl').forEach(el => io.observe(el));
+  $$('.isaiah .hl').forEach((el, i) => el.style.transitionDelay = (i * .25) + 's');
+
+  /* contents lists */
+  const chapters = $$('section[data-n]');
+  $('#contentsList').innerHTML = chapters.map(s => `<li><a href="#${s.id}"><b>${s.dataset.n}</b><span>${s.dataset.title}</span><small>${s.dataset.d || ''}</small></a></li>`).join('');
+  $('#tocList').innerHTML = chapters.map(s => `<li><a href="#${s.id}"><b>${s.dataset.n}</b><span>${s.dataset.title}</span></a></li>`).join('');
+  const toc = $('#toc');
+  const setToc = o => { toc.classList.toggle('open', o); toc.setAttribute('aria-hidden', String(!o)); document.body.style.overflow = o ? 'hidden' : ''; };
+  $('#tocOpen').onclick = () => setToc(true);
+  $('#tocClose').onclick = () => setToc(false);
+  $$('#tocList a').forEach(a => a.onclick = () => setToc(false));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setToc(false); });
+
+  /* nav state + progress line */
+  const nav = $('#nav'), prog = $('#progress'), now = $('#navNow');
+  const onScroll = () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    prog.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
+    nav.classList.toggle('solid', scrollY > innerHeight * .6);
+  };
+  addEventListener('scroll', onScroll, {passive: true}); onScroll();
+  const so = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) now.textContent = (e.target.dataset.n ? e.target.dataset.n + ' · ' : '') + e.target.dataset.title; }), {rootMargin: '-45% 0px -50% 0px'});
+  $$('section[data-title]').forEach(s => so.observe(s));
+
+  /* logo anatomy hover */
+  const hl = p => $$('.pin,.part').forEach(el => el.classList.toggle('on', el.dataset.p === p));
+  $$('.part,.pin').forEach(el => { el.addEventListener('mouseenter', () => hl(el.dataset.p)); el.addEventListener('mouseleave', () => hl(null)); });
+
+  /* clear space toggle */
+  $('#csToggle').onclick = function(){ const on = this.getAttribute('aria-pressed') !== 'true'; this.setAttribute('aria-pressed', String(on)); $('#csBox').classList.toggle('show', on); };
+
+  /* version switcher */
+  const vMap = {full: ['full', 'Full colour'], white: ['white', 'All white'], black: ['black', 'All black']};
+  $$('#vsPick button').forEach(b => b.onclick = () => {
+    $$('#vsPick button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    const st = $('#vsStage'), bg = b.dataset.bg, photo = bg.startsWith('photo');
+    st.className = 'vs-stage' + (photo ? ' ' + bg : '');
+    st.style.background = photo ? '' : bg;
+    $('#vsImg').src = IMG[vMap[b.dataset.v][0]];
+    const cap = $('#vsCap');
+    cap.innerHTML = `<span>${b.dataset.n}</span><span>${vMap[b.dataset.v][1]}</span>`;
+    cap.style.color = b.dataset.v === 'white' ? 'rgba(255,255,255,.7)' : '';
+  });
+
+  /* copy */
+  const toast = $('#toast'); let tt;
+  const say = m => { toast.textContent = m; toast.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('show'), 1600); };
+  const copy = t => {
+    const fallback = () => { const a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); say('Copied ' + t); } catch (e) { say(t); } a.remove(); };
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(t).then(() => say('Copied ' + t), fallback); else fallback();
+  };
+  $$('[data-copy]').forEach(b => b.onclick = () => copy(b.dataset.copy));
+
+  /* type tester */
+  const out = $('#tOut');
+  const seg = (id, fn) => $$('#' + id + ' button').forEach(b => b.onclick = () => { $$('#' + id + ' button').forEach(x => x.setAttribute('aria-pressed', String(x === b))); fn(b); });
+  seg('tFace', b => out.style.fontFamily = b.dataset.f === 'serif' ? 'var(--serif)' : 'var(--sans)');
+  seg('tStyle', b => out.style.fontStyle = b.dataset.s);
+  $('#tSize').oninput = e => out.style.fontSize = e.target.value + 'px';
+
+  /* ── merch lightbox ── */
+  const phs = $$('.ph'), lb = $('#lb');
+  let cur = 0;
+  const show = i => { cur = (i + phs.length) % phs.length; const f = phs[cur]; $('#lbImg').src = f.querySelector('img').src; $('#lbImg').alt = f.querySelector('figcaption').textContent; $('#lbCap').textContent = f.querySelector('figcaption').textContent; };
+  const setLb = o => { lb.classList.toggle('open', o); lb.setAttribute('aria-hidden', String(!o)); document.body.style.overflow = o ? 'hidden' : ''; };
+  phs.forEach((f, i) => f.onclick = () => { show(i); setLb(true); });
+  $('#lbX').onclick = () => setLb(false);
+  $('#lbPrev').onclick = e => { e.stopPropagation(); show(cur - 1); };
+  $('#lbNext').onclick = e => { e.stopPropagation(); show(cur + 1); };
+  lb.onclick = e => { if (e.target === lb) setLb(false); };
+  addEventListener('keydown', e => { if (!lb.classList.contains('open')) return; if (e.key === 'Escape') setLb(false); if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+
+  /* ── Post Studio ── */
+  const cv = $('#sCanvas'), cx = cv.getContext('2d');
+  const S = {format: 'square', theme: 'red'};
+  const SIZES = {square: [1080, 1080], story: [1080, 1920], slide: [1920, 1080]};
+  const THEMES = {
+    red:   {bg: '#B50000', fg: '#FFFFFF', line: '#FFFFFF', label: 'rgba(255,255,255,.78)'},
+    ink:   {bg: '#111111', fg: '#FFFFFF', line: '#FFFFFF', label: '#E19999'},
+    parch: {bg: '#F7F3EC', fg: '#111111', line: '#B50000', label: '#B50000'}
+  };
+  const wrap = (text, maxW) => {
+    const lines = [];
+    text.split(/\n/).forEach(par => {
+      let line = '';
+      par.split(/\s+/).filter(Boolean).forEach(w => {
+        const t = line ? line + ' ' + w : w;
+        if (cx.measureText(t).width > maxW && line) { lines.push(line); line = w; } else line = t;
+      });
+      lines.push(line);
+    });
+    return lines;
+  };
+  function draw(){
+    const [W, H] = SIZES[S.format], th = THEMES[S.theme], m = Math.min(W, H);
+    cv.width = W; cv.height = H;
+    cx.fillStyle = th.bg; cx.fillRect(0, 0, W, H);
+    if (S.theme !== 'parch') {
+      const g = cx.createRadialGradient(W * .85, H * .12, 0, W * .85, H * .12, m * .9);
+      g.addColorStop(0, 'rgba(255,255,255,.10)'); g.addColorStop(1, 'rgba(255,255,255,0)');
+      cx.fillStyle = g; cx.fillRect(0, 0, W, H);
+    }
+    const P = Math.round(m * .085);
+    const ls = Math.round(m * .026);
+    cx.textBaseline = 'alphabetic';
+    cx.fillStyle = th.label; cx.font = `700 ${ls}px "Source Sans 3", sans-serif`;
+    if ('letterSpacing' in cx) cx.letterSpacing = Math.round(ls * .2) + 'px';
+    cx.fillText(($('#sEyebrow').value || '').toUpperCase(), P, P + ls);
+    if ('letterSpacing' in cx) cx.letterSpacing = '0px';
+    // the mark, tail running off the right edge
+    const t = m * .0125, mh = 14.25 * t, mb = H - P, top = mb - mh, sx = P + 3.208 * t;
+    cx.fillStyle = th.line;
+    cx.fillRect(P, top + 3.417 * t, 7.458 * t, t);
+    cx.fillRect(sx, top, t, mh);
+    cx.fillRect(sx, mb - t, W - sx, t);
+    // words standing on the line
+    const rs = Math.round(m * .042);
+    cx.fillStyle = th.fg; cx.font = `italic 500 ${rs}px "EB Garamond", serif`;
+    cx.fillText($('#sRef').value || '', sx + t * 3.2, mb - t * 2.6);
+    // message
+    const areaTop = P + ls + P * .9, areaBot = top - P * .7, maxW = W - P * 2;
+    let size = Math.round(m * (S.format === 'story' ? .12 : .11)), lines = [];
+    const msg = $('#sText').value || ' ';
+    for (; size > 28; size -= 2) {
+      cx.font = `500 ${size}px "EB Garamond", serif`;
+      lines = wrap(msg, maxW);
+      if (lines.length * size * 1.08 <= areaBot - areaTop) break;
+    }
+    const lh = size * 1.08;
+    let y = areaTop + (areaBot - areaTop - lines.length * lh) / 2 + size * .82;
+    cx.fillStyle = th.fg;
+    lines.forEach(l => { cx.fillText(l, P, y); y += lh; });
+  }
+  const pills = (id, key) => $$('#' + id + ' button').forEach(b => b.onclick = () => { $$('#' + id + ' button').forEach(x => x.setAttribute('aria-pressed', String(x === b))); S[key] = b.dataset.v; draw(); });
+  pills('sFormat', 'format'); pills('sTheme', 'theme');
+  ['sEyebrow', 'sText', 'sRef'].forEach(id => $('#' + id).addEventListener('input', draw));
+  $('#sDownload').onclick = () => cv.toBlob(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `cec-${S.format}-${S.theme}.png`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); say('Post downloaded'); });
+  draw();
+  if (document.fonts) Promise.all(['500 80px "EB Garamond"', 'italic 500 40px "EB Garamond"', '700 20px "Source Sans 3"'].map(f => document.fonts.load(f))).then(() => document.fonts.ready).then(draw, draw);
+
+  /* ── Downloads ── */
+  const svgMark = (c, end) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${end} 342" width="${end}" height="342"><g fill="${c}"><rect x="0" y="82" width="179" height="24"/><rect x="77" y="0" width="24" height="342"/><rect x="77" y="318" width="${end - 77}" height="24"/></g></svg>`;
+  const items = [
+    ['Logo · full colour', 'Vector SVG', 'svgFull', 'cec-logo-full-colour.svg', '#fff', 'full'],
+    ['Logo · full colour', 'PNG · 4,186 px', 'full', 'cec-logo-full-colour.png', '#fff', 'full'],
+    ['Logo · all white', 'Vector SVG', 'svgWhite', 'cec-logo-white.svg', '#111', 'white'],
+    ['Logo · all white', 'PNG · 4,186 px', 'white', 'cec-logo-white.png', '#B50000', 'white'],
+    ['Logo · all black', 'PNG · 4,186 px', 'black', 'cec-logo-black.png', '#fff', 'black'],
+    ['Logo · no tagline', 'PNG · 4,186 px', 'wordmark', 'cec-wordmark-full-colour.png', '#fff', 'wordmark'],
+    ['Logo · no tagline, white', 'PNG · 4,186 px', 'wordmarkWhite', 'cec-wordmark-white.png', '#111', 'wordmarkWhite'],
+    ['Mark · red', 'Vector SVG', ['#B50000', 1895], 'cec-mark-red.svg', '#fff'],
+    ['Mark · white', 'Vector SVG', ['#FFFFFF', 1895], 'cec-mark-white.svg', '#B50000'],
+    ['Square mark · red', 'Vector SVG', ['#B50000', 179], 'cec-mark-square-red.svg', '#fff'],
+    ['Square mark · white', 'Vector SVG', ['#FFFFFF', 179], 'cec-mark-square-white.svg', '#111'],
+    ['Brand colours', 'Text swatch list', 'colours', 'cec-brand-colours.txt', 'linear-gradient(90deg,#B50000 0 40%,#111 40% 60%,#F7F3EC 60% 80%,#E6DFD3 80%)']
+  ];
+  const COLOURS = 'Christ Extension Church: brand colours\n\nCross Red   #B50000  RGB 181 0 0      CMYK 0 100 100 29  (Pantone ~7621 C, proof first)\nInk Black   #111111  RGB 17 17 17     CMYK 0 0 0 100\nParchment   #F7F3EC  RGB 247 243 236\nWhite       #FFFFFF\nDeep Wine   #7E0000\nStone       #E6DFD3\nSlate       #5C5752\nBlush       #F0CCCC\n';
+  const textURL = (s, type) => URL.createObjectURL(new Blob([s], {type}));
+  $('#dlGrid').innerHTML = items.map(([n, k, src, file, bg, preview], i) => {
+    let href, art;
+    if (Array.isArray(src)) { const s = svgMark(src[0], src[1]); href = textURL(s, 'image/svg+xml'); art = s; }
+    else if (src === 'colours') { href = textURL(COLOURS, 'text/plain'); art = ''; }
+    else if (src.startsWith('svg')) { href = textURL(IMG[src], 'image/svg+xml'); art = `<img src="${IMG[preview]}" alt="">`; }
+    else { href = IMG[src]; art = `<img src="${IMG[preview]}" alt="">`; }
+    return `<div class="dl-item rv${i % 3 ? ' d' + (i % 3) : ''}"><div class="dl-art" style="background:${bg}">${art}</div><div class="dl-meta"><div><b>${n}</b><small>${k}</small></div><a href="${href}" download="${file}">Download</a></div></div>`;
+  }).join('');
+  $$('#dlGrid .rv').forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CEC Letterhead Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#B50000;--ink:#111;--slate:#5C5752;--parch:#F7F3EC;--stone:#E6DFD3;--rule:#E4DED4;--green:#0A7A3E;
+  --serif:'EB Garamond',Garamond,serif;--sans:'Source Sans 3','Segoe UI',Arial,sans-serif}
+body{font-family:var(--sans);background:var(--stone);color:var(--ink);padding:clamp(24px,5vw,72px) clamp(16px,5vw,72px)}
+.wrap{max-width:1320px;margin:0 auto}
+header.top{margin-bottom:56px}
+.k{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,6vw,76px);line-height:.95;margin-bottom:18px}
+.lede{font-size:17px;line-height:1.7;color:var(--slate);max-width:760px}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3vw,40px);line-height:1.05;margin-bottom:10px}
+
+/* current letterhead review */
+.review{display:grid;grid-template-columns:300px 1fr;gap:40px;background:#fff;border-radius:22px;padding:clamp(20px,3vw,40px);margin-bottom:72px;align-items:start}
+.review img{width:100%;border-radius:6px;box-shadow:0 20px 40px -20px rgba(0,0,0,.35)}
+.issues{list-style:none;counter-reset:i;display:grid;grid-template-columns:1fr 1fr;gap:4px 32px;margin-top:18px}
+.issues li{counter-increment:i;display:grid;grid-template-columns:28px 1fr;gap:8px;padding:12px 0;border-top:1px solid var(--rule);font-size:14.5px;line-height:1.55;color:var(--slate)}
+.issues li::before{content:counter(i);width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center}
+.issues b{color:var(--ink)}
+.keep{margin-top:18px;font-size:14.5px;line-height:1.6;color:var(--slate)}
+.keep b{color:var(--ink)}
+
+/* concepts */
+.concepts{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,4vw,56px)}
+.concept .meta{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.concept .meta span{font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--red)}
+.concept .why{font-size:14.5px;line-height:1.6;color:var(--slate);margin-bottom:18px;min-height:70px}
+.concept .why b{color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tags span{font-size:12px;font-weight:600;padding:6px 10px;border-radius:999px;background:#fff;color:var(--slate)}
+.tags span.rec{background:var(--red);color:#fff}
+
+/* the A4 sheet: everything sized in container units so it scales */
+.a4{container-type:inline-size;width:100%;aspect-ratio:210/297;background:#fff;position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.04)}
+.a4 .logo{position:absolute}
+.a4 .body{position:absolute;left:12cqw;right:12cqw;font-size:1.85cqw;line-height:1.6;color:#333}
+.a4 .body p{margin-bottom:1.6cqw}
+.a4 .date{color:var(--slate);margin-bottom:3cqw}
+.a4 .sign{margin-top:4cqw}
+.a4 .sign b{display:block;font-weight:600;color:var(--ink)}
+.a4 .small{font-size:1.45cqw;line-height:1.6;color:var(--slate)}
+.a4 .caps{font-family:var(--sans);font-size:1.35cqw;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+/* the extension line, in container units */
+.xl{position:absolute;--t:.9cqw;height:calc(var(--t)*14.25)}
+.xl i{position:absolute;background:var(--c,var(--red))}
+.xl .b{left:0;top:calc(var(--t)*3.417);width:calc(var(--t)*7.458);height:var(--t)}
+.xl .s{left:calc(var(--t)*3.208);top:0;bottom:0;width:var(--t)}
+.xl .t{left:calc(var(--t)*3.208);bottom:0;height:var(--t);right:0}
+
+@media (max-width:900px){
+  .review{grid-template-columns:1fr}.review img{max-width:320px}
+  .issues{grid-template-columns:1fr}
+  .concepts{grid-template-columns:1fr}
+}
+/* print = the four letterheads only, one true A4 page each */
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .wrap{max-width:none}
+  header.top,section.review,.concept .meta,.concept .why,.tags{display:none!important}
+  .concepts{display:block}
+  .a4{width:210mm;height:297mm;aspect-ratio:auto;box-shadow:none;break-after:page}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="k">Christ Extension Church · Letterhead</div>
+  <h1>Four directions<br>for the letterhead.</h1>
+  <p class="lede">Each concept below is drawn at true A4 proportions with a sample letter, so you can judge how it reads with real text on it. All four use the corrected logo and the brand book's colours and fonts.</p>
+</header>
+
+<section class="review">
+  <img src="{{CURRENT}}" alt="The current letterhead">
+  <div>
+    <div class="k">The current letterhead</div>
+    <h2>What needs fixing.</h2>
+    <ol class="issues">
+      <li><span><b>Old tagline.</b> It still reads “his pleasures”. It should be “Prospering His pleasure on earth”.</span></li>
+      <li><span><b>It's one flat image.</b> The whole page is a 1,399 × 2,048 px picture behind the text, so the logo prints soft and nothing can be edited.</span></li>
+      <li><span><b>Letter size, not A4.</b> The page is set to US Letter, so it shifts and crops when printed on A4 paper in Kenya.</span></li>
+      <li><span><b>The lamb sits under the writing.</b> A full-page watermark behind the text competes with the letter and wastes toner.</span></li>
+      <li><span><b>No contact details.</b> There's no address, phone, email or website anywhere on the page.</span></li>
+      <li><span><b>Off-brand colours.</b> The green bar and the blue-grey rules aren't in the palette, and the footer font isn't a brand font.</span></li>
+      <li><span><b>The full verse is long for a footer.</b> Three lines of scripture at the bottom crowd the page. One key line says more.</span></li>
+      <li><span><b>The extension line isn't used.</b> The brand's signature graphic, the cross with its tail, is missing.</span></li>
+    </ol>
+    <p class="keep"><b>Worth keeping:</b> the lamb and Isaiah 53:10 are meaningful choices. Concepts B and D keep them in a quieter form. If the red and green stand for Kenya's flag, concept D keeps that too.</p>
+  </div>
+</section>
+
+<div class="concepts">
+
+  <!-- A -->
+  <article class="concept">
+    <div class="meta"><span>A</span><h2>The Extension Line</h2></div>
+    <p class="why"><b>Recommended for everyday letters.</b> Logo at the top left, contact details opposite, and the cross's tail running across the foot of the page with the key line of Isaiah 53:10 standing on it. It is clean, prints cheaply, and is unmistakably CEC.</p>
+    <div class="a4">
+      <img class="logo" src="{{LOGO}}" alt="" style="left:12cqw;top:8cqw;width:40cqw">
+      <div class="small" style="position:absolute;right:12cqw;top:8.6cqw;text-align:right">P.O. Box 00000 – 00100, Nairobi<br>+254 7XX XXX XXX<br>info@domain · www.domain</div>
+      <div class="body" style="top:36cqw">
+        <p class="date">7 October 2026</p>
+        <p>Dear Brethren,</p>
+        <p>Greetings in the precious name of our Lord Jesus Christ. We write to invite you to our annual thanksgiving service, a day set apart to give glory to God for His faithfulness over the past year.</p>
+        <p>The service will be held on Sunday at 10 am at our main sanctuary. We would be honoured by your presence.</p>
+        <div class="sign"><b>Pastor Name</b>Christ Extension Church Int'l</div>
+      </div>
+      <div class="xl" style="left:12cqw;right:0;bottom:9cqw"><i class="b"></i><i class="s"></i><i class="t"></i></div>
+      <div style="position:absolute;left:21.5cqw;bottom:11.6cqw;font-family:var(--serif);font-style:italic;font-size:2.25cqw;color:var(--ink)">“And the pleasure of the Lord shall prosper in His hand.” <span class="caps" style="font-style:normal;color:var(--red);margin-left:1cqw">Isaiah 53:10</span></div>
+    </div>
+    <div class="tags"><span class="rec">Recommended</span><span>Office printer friendly</span><span>Uses the brand device</span></div>
+  </article>
+
+  <!-- B -->
+  <article class="concept">
+    <div class="meta"><span>B</span><h2>Heritage</h2></div>
+    <p class="why">Keeps what the church already loves. <b>A centred logo, and the lamb as a small engraving above the verse</b> at the foot of the page instead of behind the letter. Formal and warm, good for official correspondence and certificates.</p>
+    <div class="a4">
+      <img class="logo" src="{{LOGO}}" alt="" style="left:30cqw;top:7cqw;width:40cqw">
+      <div style="position:absolute;left:46cqw;width:8cqw;top:25cqw;height:.35cqw;background:var(--red)"></div>
+      <div class="body" style="top:32cqw">
+        <p class="date">7 October 2026</p>
+        <p>Dear Brethren,</p>
+        <p>Greetings in the precious name of our Lord Jesus Christ. We write to invite you to our annual thanksgiving service, a day set apart to give glory to God for His faithfulness over the past year.</p>
+        <p>The service will be held on Sunday at 10 am at our main sanctuary. We would be honoured by your presence.</p>
+        <div class="sign"><b>Pastor Name</b>Christ Extension Church Int'l</div>
+      </div>
+      <img src="{{LAMB}}" alt="" style="position:absolute;left:44.5cqw;bottom:19.5cqw;width:11cqw;opacity:.8">
+      <div style="position:absolute;left:12cqw;right:12cqw;bottom:13.5cqw;text-align:center;font-family:var(--serif);font-style:italic;font-size:2.1cqw;color:var(--ink)">“He shall see His seed, He shall prolong His days.” <span class="caps" style="font-style:normal;color:var(--red)">Isaiah 53:10</span></div>
+      <div class="small" style="position:absolute;left:12cqw;right:12cqw;bottom:7cqw;text-align:center;border-top:1px solid var(--rule);padding-top:2.2cqw">P.O. Box 00000 – 00100, Nairobi · +254 7XX XXX XXX · info@domain · www.domain</div>
+    </div>
+    <div class="tags"><span>Keeps the lamb</span><span>Formal</span><span>Certificates &amp; official letters</span></div>
+  </article>
+
+  <!-- C -->
+  <article class="concept">
+    <div class="meta"><span>C</span><h2>Bold Footer</h2></div>
+    <p class="why">The most striking option. <b>A full-width Cross Red band at the foot of the page</b>, with the white cross and its tail running off the edge and the Affirmation standing on it. Best for <b>professionally pre-printed stock</b>, because office printers can't print to the edge.</p>
+    <div class="a4">
+      <img class="logo" src="{{LOGO}}" alt="" style="left:12cqw;top:8cqw;width:40cqw">
+      <div style="position:absolute;right:12cqw;top:9cqw;text-align:right">
+        <div class="caps" style="color:var(--red)">Christ Extension Church Int'l</div>
+        <div class="small" style="margin-top:1cqw">P.O. Box 00000 – 00100, Nairobi<br>+254 7XX XXX XXX · info@domain</div>
+      </div>
+      <div class="body" style="top:36cqw">
+        <p class="date">7 October 2026</p>
+        <p>Dear Brethren,</p>
+        <p>Greetings in the precious name of our Lord Jesus Christ. We write to invite you to our annual thanksgiving service, a day set apart to give glory to God for His faithfulness over the past year.</p>
+        <p>The service will be held on Sunday at 10 am at our main sanctuary. We would be honoured by your presence.</p>
+        <div class="sign"><b>Pastor Name</b>Christ Extension Church Int'l</div>
+      </div>
+      <div style="position:absolute;left:0;right:0;bottom:0;height:20cqw;background:var(--red)">
+        <div class="xl" style="--c:#fff;left:12cqw;right:0;bottom:6cqw"><i class="b"></i><i class="s"></i><i class="t"></i></div>
+        <div style="position:absolute;left:21.5cqw;bottom:8.6cqw;font-family:var(--serif);font-style:italic;font-size:2.6cqw;color:#fff">Because I am here, He is here.</div>
+        <div class="small" style="position:absolute;left:21.5cqw;bottom:2.4cqw;color:rgba(255,255,255,.8)">www.domain</div>
+      </div>
+    </div>
+    <div class="tags"><span>Most striking</span><span>Needs pre-printed stock</span><span>Events &amp; invitations</span></div>
+  </article>
+
+  <!-- D -->
+  <article class="concept">
+    <div class="meta"><span>D</span><h2>National Colours, Refined</h2></div>
+    <p class="why">If the red and green bars are meant as <b>Kenya's colours</b>, this keeps them but brings them into the system. Red leads, as it does in the brand. A white gap and a short green tail echo the flag, and the Kenyan identity stays without competing with the cross.</p>
+    <div class="a4">
+      <div style="position:absolute;left:0;top:0;height:1.6cqw;width:64cqw;background:var(--red)"></div>
+      <div style="position:absolute;left:66cqw;top:0;height:1.6cqw;right:0;background:var(--green)"></div>
+      <img class="logo" src="{{LOGO}}" alt="" style="left:12cqw;top:9cqw;width:40cqw">
+      <div class="small" style="position:absolute;right:12cqw;top:9.6cqw;text-align:right">P.O. Box 00000 – 00100, Nairobi<br>+254 7XX XXX XXX<br>info@domain · www.domain</div>
+      <div class="body" style="top:36cqw">
+        <p class="date">7 October 2026</p>
+        <p>Dear Brethren,</p>
+        <p>Greetings in the precious name of our Lord Jesus Christ. We write to invite you to our annual thanksgiving service, a day set apart to give glory to God for His faithfulness over the past year.</p>
+        <p>The service will be held on Sunday at 10 am at our main sanctuary. We would be honoured by your presence.</p>
+        <div class="sign"><b>Pastor Name</b>Christ Extension Church Int'l</div>
+      </div>
+      <img src="{{LAMB}}" alt="" style="position:absolute;right:12cqw;bottom:8.5cqw;width:9cqw;opacity:.75">
+      <div style="position:absolute;left:12cqw;right:24cqw;bottom:9cqw;border-top:1px solid var(--rule);padding-top:2cqw;font-family:var(--serif);font-style:italic;font-size:2cqw;color:var(--ink)">“And the pleasure of the Lord shall prosper in His hand.” <span class="caps" style="font-style:normal;color:var(--red)">Isaiah 53:10</span></div>
+    </div>
+    <div class="tags"><span>Keeps the national colours</span><span>Keeps the lamb, smaller</span><span>Office printer friendly</span></div>
+  </article>
+
+</div>
+
+<section class="review" style="margin:72px 0 0;grid-template-columns:1fr">
+  <div>
+    <div class="k">However it looks, build it properly</div>
+    <h2>A real Word template, not a picture.</h2>
+    <ol class="issues">
+      <li><span><b>A4, 25 mm margins.</b> It prints correctly on local paper.</span></li>
+      <li><span><b>Vector logo in the header.</b> It stays sharp at any size, and the corrected tagline is built in.</span></li>
+      <li><span><b>Editable contact details</b> in the header and footer, so they can be updated without a designer.</span></li>
+      <li><span><b>Brand fonts set as styles.</b> Garamond for headings and Calibri or Source Sans for body text, so every letter looks the same.</span></li>
+      <li><span><b>First page only.</b> Continuation pages get a slim header, so a two-page letter doesn't repeat the full design.</span></li>
+      <li><span><b>A PDF version</b> for printers and for sending letters by email.</span></li>
+    </ol>
+  </div>
+</section>
+
+</div>
+</body>
+</html>
